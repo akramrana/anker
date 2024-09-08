@@ -19,6 +19,8 @@ use yii\bootstrap5\Html;
     <?= $form->field($model, 'sku')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'remaining_qty')->textInput(['type' => 'number']) ?>
+    
+    <?= $form->field($model, 'is_store_pickup')->checkbox() ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

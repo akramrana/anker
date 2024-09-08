@@ -32,8 +32,8 @@ class Items extends \yii\db\ActiveRecord
     public function rules() {
         return [
             [['name_en', 'name_ar', 'remaining_qty', 'created_at', 'updated_at', 'sku'], 'required'],
-            [['remaining_qty', 'is_active', 'is_deleted'], 'integer'],
-            [['created_at', 'updated_at', 'sku'], 'safe'],
+            [['remaining_qty', 'is_active', 'is_deleted', 'is_store_pickup'], 'integer'],
+            [['created_at', 'updated_at', 'sku', 'is_store_pickup'], 'safe'],
             [['name_en', 'name_ar'], 'string', 'max' => 100],
             ['sku', 'checkUniqueSku'],
         ];
@@ -52,7 +52,8 @@ class Items extends \yii\db\ActiveRecord
             'updated_at' => 'Updated At',
             'is_active' => 'Status',
             'is_deleted' => 'Is Deleted',
-            'sku' => 'SKU'
+            'sku' => 'SKU',
+            'is_store_pickup' => 'Is Store Pickup ?',
         ];
     }
     

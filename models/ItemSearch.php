@@ -17,7 +17,7 @@ class ItemSearch extends Items
     public function rules()
     {
         return [
-            [['item_id', 'remaining_qty', 'is_active', 'is_deleted'], 'integer'],
+            [['item_id', 'remaining_qty', 'is_active', 'is_deleted', 'is_store_pickup'], 'integer'],
             [['name_en', 'name_ar', 'created_at', 'updated_at', 'sku'], 'safe'],
         ];
     }
@@ -61,6 +61,7 @@ class ItemSearch extends Items
         $query->andFilterWhere([
             'remaining_qty' => $this->remaining_qty,
             'is_active' => $this->is_active,
+            'is_store_pickup' => $this->is_store_pickup,
             'sku' => $this->sku,
         ]);
 

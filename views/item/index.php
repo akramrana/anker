@@ -34,6 +34,14 @@ $this->params['breadcrumbs'][] = $this->title;
                             'sku',
                             'remaining_qty',
                             [
+                                'attribute' => 'is_store_pickup',
+                                'format' => 'raw',
+                                'value' => function ($model, $url) {
+                                    return $model->is_store_pickup == '1' ? 'Yes' : 'No';
+                                },
+                                'filter' => Html::activeDropDownList($searchModel, 'is_store_pickup', [1 => 'Yes', 0 => 'No'], ['class' => 'form-control select2', 'prompt' => 'Filter']),
+                            ],
+                            [
                                 'label' => 'Status',
                                 'attribute' => 'is_active',
                                 'format' => 'raw',
