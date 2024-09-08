@@ -144,6 +144,16 @@ body{
 .lang-sec{
     margin-left: 80px;
 }
+.image-angle-ar{
+    width: 273px;
+    height: 145px;
+    background: url(../images/group-124719.png);
+}
+.image-angle-ar-bottom{
+    width: 273px;
+    height: 145px;
+    background: url(../images/group-124719.png);
+}
 @media (max-width: 480px) {
     .logo{
         width: 100px;

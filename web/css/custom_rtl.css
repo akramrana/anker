@@ -1,0 +1,57 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Sep 8, 2024, 7:36:27 PM
+    Author     : akram
+*/
+body{
+    background: #F4F4F4;
+}
+.author-txt{
+    text-align: left !important;
+}
+.rtl-top-padding{
+    padding-right: 50px;
+}
+.author{
+    font-size: 18px;
+    margin-top:10px;
+    display: inline-block;
+}
+.ipower{
+    font-size: 5vw;
+    text-align: right;
+    margin-right: 50px;
+}
+.experience{
+    font-size: 1.5vw;
+    text-align: right;
+    margin-right: 50px;
+}
+.lucky-blue{
+    margin-right: 50px;
+}
+.lang-sec{
+    margin-left: 0px;
+}
+@media (max-width: 480px) {
+    .rtl-top-padding{
+        padding-right: 25px;
+    }
+    .ipower{
+        font-size: 4vw;
+        margin-right: 20px;
+    }
+    .experience{
+        font-size: 1.2vw;
+        margin-right: 20px;
+    }
+    .lucky-blue{
+        margin-right: 20px;
+    }
+}
+@media (max-width: 767px) {
+    
+}

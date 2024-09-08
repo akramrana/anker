@@ -28,6 +28,7 @@ class FrontendAsset extends \yii\web\AssetBundle
     
     public $js = [
         'admin_lte/plugins/bootstrap/js/bootstrap.bundle.min.js',
+        'js/site.js'
     ];
     
     public $depends = [

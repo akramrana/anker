@@ -52,7 +52,14 @@ $config = [
             'rules' => [
             ],
         ],
-        
+        'i18n' => [
+            'translations' => [
+                'yii' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@app/messages'
+                ],
+            ],
+        ],
     ],
     'params' => $params,
     //'defaultRoute' => 'dashboard/index',

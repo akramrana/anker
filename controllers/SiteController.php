@@ -12,11 +12,11 @@ use app\models\ContactForm;
 
 class SiteController extends Controller
 {
+
     /**
      * {@inheritdoc}
      */
-    public function behaviors()
-    {
+    public function behaviors() {
         return [
             'access' => [
                 'class' => AccessControl::class,
@@ -38,11 +38,20 @@ class SiteController extends Controller
         ];
     }
 
+    public function init() {
+        parent::init();
+        if (Yii::$app->session->has('lang')) {
+            Yii::$app->language = Yii::$app->session->get('lang');
+        } else {
+            Yii::$app->language = 'en';
+            Yii::$app->session->set('lang', 'en');
+        }
+    }
+
     /**
      * {@inheritdoc}
      */
-    public function actions()
-    {
+    public function actions() {
         return [
             'error' => [
                 'class' => 'yii\web\ErrorAction',
@@ -59,8 +68,7 @@ class SiteController extends Controller
      *
      * @return string
      */
-    public function actionIndex()
-    {
+    public function actionIndex() {
         $this->layout = 'site_main';
         return $this->render('index');
     }
@@ -70,8 +78,7 @@ class SiteController extends Controller
      *
      * @return Response|string
      */
-    public function actionLogin()
-    {
+    public function actionLogin() {
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
         }
@@ -83,7 +90,7 @@ class SiteController extends Controller
 
         $model->password = '';
         return $this->renderAjax('login', [
-            'model' => $model,
+                    'model' => $model,
         ]);
     }
 
@@ -92,8 +99,7 @@ class SiteController extends Controller
      *
      * @return Response
      */
-    public function actionLogout()
-    {
+    public function actionLogout() {
         Yii::$app->user->logout();
 
         return $this->goHome();
@@ -104,8 +110,7 @@ class SiteController extends Controller
      *
      * @return Response|string
      */
-    public function actionContact()
-    {
+    public function actionContact() {
         $model = new ContactForm();
         if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {
             Yii::$app->session->setFlash('contactFormSubmitted');
@@ -113,7 +118,7 @@ class SiteController extends Controller
             return $this->refresh();
         }
         return $this->render('contact', [
-            'model' => $model,
+                    'model' => $model,
         ]);
     }
 
@@ -122,8 +127,13 @@ class SiteController extends Controller
      *
      * @return string
      */
-    public function actionAbout()
-    {
+    public function actionAbout() {
         return $this->render('about');
+    }
+    
+    public function actionChangeLanguage() {
+        if (isset($_GET) && $_GET['lang'] != '') {
+            Yii::$app->session->set('lang', $_GET['lang']);
+        }
     }
 }

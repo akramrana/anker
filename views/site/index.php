@@ -4,18 +4,31 @@
 use yii\helpers\BaseUrl;
 
 $this->title = 'Home';
+$titleFont = "DINNextLTPro-Bold";
+$experienceFont = "MyriadPro-Regular";
+$luckyBlueFont = "DINNextLTPro-Regular";
+$luckyBlueFloat = "";
+if (Yii::$app->session['lang'] == 'ar') {
+    $titleFont = "GESSTwoBold";
+    $experienceFont = "GESSTwoMedium";
+    $luckyBlueFont = "GESSTwoMedium";
+    $luckyBlueFloat = "float-right";
+}
 ?>
 <div class="row">
     <div class="col-4">
-        <h1 class="DINNextLTPro-Bold ipower">
-            <div>iPower</div>
-            <div>Collection</div>
+        <h1 class="<?= $titleFont; ?> ipower">
+            <div><?= Yii::t('yii', 'iPower'); ?></div>
+            <div><?= Yii::t('yii', 'Collection'); ?></div>
         </h1>
-        <p class="MyriadPro-Regular experience">
-            Experience the Ultimate in<br/> Fast, Safe, and Portable Charging 
+        <p class="<?= $experienceFont; ?> experience">
+            <span><?= Yii::t('yii', 'Experience the Ultimate in'); ?></span><br/>
+            <span><?= Yii::t('yii', 'Fast, Safe, and Portable Charging'); ?></span>
         </p>
-        <p>
-            <a href="#" class="btn btn-primary btn-lg DINNextLTPro-Regular lucky-blue">Participate in Lucky Draw </a>
+        <p class="<?= $luckyBlueFloat; ?>">
+            <a href="#" class="btn btn-primary btn-lg <?php echo $luckyBlueFont; ?> lucky-blue">
+                <?= Yii::t('yii', 'Participate in Lucky Draw'); ?>
+            </a>
         </p>
     </div>
     <div class="col-8">

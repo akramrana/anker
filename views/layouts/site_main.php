@@ -7,9 +7,26 @@ use app\assets\FrontendAsset;
 
 FrontendAsset::register($this);
 $this->beginPage();
+//debugPrint(Yii::$app->session['lang']);
+$direction = "ltr";
+$imageAngle = "en";
+$float = "right";
+$textAlign = "";
+$textLeft = "text-left";
+$topPaddingRightClass = "";
+$authorFont = "TitilliumWeb-SemiBold";
+if (Yii::$app->session['lang'] == 'ar') {
+    $direction = "rtl";
+    $imageAngle = "ar";
+    $float = "left";
+    $textAlign = "text-right";
+    $textLeft = "text-right";
+    $topPaddingRightClass = "rtl-top-padding";
+    $authorFont = "GESSTwoMedium";
+}
 ?>
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="<?php echo Yii::$app->session['lang']; ?>" xmlns="http://www.w3.org/1999/html">
     <head>
         <meta charset="<?= Yii::$app->charset ?>"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
@@ -20,15 +37,22 @@ $this->beginPage();
         <script type="text/javascript">
             var baseUrl = '<?php echo BaseUrl::home(); ?>';
         </script>
+        <?php
+        if (Yii::$app->session['lang'] == 'ar') {
+            ?>
+            <link rel="stylesheet" href="<?php echo BaseUrl::home() ?>css/custom_rtl.css"/>
+            <?php
+        }
+        ?>
     </head>
-    <body class="hold-transition">
+    <body class="hold-transition" dir="<?= $direction; ?>">
         <?php $this->beginBody() ?>
         <div class="wrapper">
             <div class="header">
                 <div class="row">
-                    <div class="col-10">
+                    <div class="col-10 <?= $textAlign; ?> <?= $topPaddingRightClass; ?>" dir="ltr">
                         <span class="ml-lg-5 ml-md-5">
-                            <a href="#">
+                            <a href="<?php echo BaseUrl::home(); ?>">
                                 <img class="mt-lg-5 mt-md-5 ms-lg-4 ms-md-4 logo" src="<?php echo BaseUrl::home(); ?>images/angker-logo.png" alt="logo" />
                             </a>
                         </span>
@@ -42,10 +66,10 @@ $this->beginPage();
                             <img class="mt-lg-5 ms-lg-4 heading-xs" src="<?php echo BaseUrl::home(); ?>images/heading.png" alt="heading" />
                         </span>
                     </div>
-                    <div class="col-2 text-center">
-                        <div class="image-angle-en float-right lang-pad">
+                    <div class="col-2 text-center" dir="ltr">
+                        <div class="image-angle-<?php echo $imageAngle; ?> float-<?= $float; ?> lang-pad">
                             <span class="lang-sec">
-                                <a href="#" class="TitilliumWeb-SemiBold lang-txt">
+                                <a onclick="site.changelanguage('en')" href="javascript:;" class="TitilliumWeb-SemiBold lang-txt">
                                     ENG
                                 </a>
                             </span>
@@ -53,7 +77,7 @@ $this->beginPage();
                                 <img class="ms-3 me-3 vertical-line" src="<?php echo BaseUrl::home(); ?>images/vertical-line.png" alt="line" />
                             </span>
                             <span>
-                                <a href="#" class="MyriadPro-Regular lang-txt">
+                                <a onclick="site.changelanguage('ar')" href="javascript:;" class="MyriadPro-Regular lang-txt">
                                     عربي
                                 </a>
                             </span>
@@ -71,13 +95,13 @@ $this->beginPage();
                             <div class="row bottom-link ml-5">
                                 <div class="col-xs-12 col-sm-12 col-md-3 col-lg-5">
                                     <div class="author-txt">
-                                        <span class="TitilliumWeb-SemiBold author">
-                                            Authorised Sellers:
+                                        <span class="<?=$authorFont;?> author">
+                                            <?= Yii::t('yii', 'Authorised Sellers:'); ?>
                                         </span>
                                     </div>
                                 </div>
                                 <div class="col-xs-12 col-sm-12 col-md-9 col-lg-7">
-                                    <div class="text-left btn-sec">
+                                    <div class="<?= $textLeft; ?> btn-sec">
                                         <a href="#" class="btn-custom">
                                             <img class="bottom-link-img" src="<?php echo BaseUrl::home(); ?>images/Microsite_07.gif" alt="external link" />
                                         </a>
@@ -101,7 +125,7 @@ $this->beginPage();
                             </div>
                         </div>
                         <div class="col-2 col-md-4 col-lg-3 d-none d-md-block">
-                            <div class="image-angle-en-bottom float-right">
+                            <div class="image-angle-<?php echo $imageAngle; ?>-bottom float-<?= $float; ?>">
                             </div>
                         </div>
                     </div>
