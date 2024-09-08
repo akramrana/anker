@@ -1,0 +1,329 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Sep 8, 2024, 12:41:19 PM
+    Author     : akram
+*/
+@font-face {
+    font-family: 'DINNextLTPro-Bold';
+    src: url('../fonts/DINNextLTPro-Bold.ttf');
+}
+@font-face {
+    font-family: 'DINNextLTPro-Regular';
+    src: url('../fonts/DINNextLTPro-Regular.ttf');
+}
+@font-face {
+    font-family: 'GESSTwoBold';
+    src: url('../fonts/GESSTwoBold.ttf');
+}
+@font-face {
+    font-family: 'GESSTwoMedium';
+    src: url('../fonts/GESSTwoMedium.ttf');
+}
+@font-face {
+    font-family: 'MyriadPro-Regular';
+    src: url('../fonts/MyriadPro-Regular.ttf');
+}
+@font-face {
+    font-family: 'TitilliumWeb-SemiBold';
+    src: url('../fonts/TitilliumWeb-SemiBold.ttf');
+}
+body{
+    background: #F4F4F4;
+    overflow-x: hidden;
+}
+.DINNextLTPro-Bold {
+    font-family: 'DINNextLTPro-Bold';
+}
+.DINNextLTPro-Regular{
+    font-family: 'DINNextLTPro-Regular';
+}
+.GESSTwoBold{
+    font-family: 'GESSTwoBold';
+}
+.GESSTwoMedium{
+    font-family: 'GESSTwoMedium';
+}
+.MyriadPro-Regular{
+    font-family: 'MyriadPro-Regular';
+}
+.TitilliumWeb-SemiBold{
+    font-family: 'TitilliumWeb-SemiBold';
+}
+.header, .footer{
+    background: url(../images/blue-bg.png) repeat;
+    height: 145px;
+    width: 100%;
+    z-index: 1;
+}
+.site-footer{
+    /*    position: fixed;
+        bottom: 0;*/
+    width: 100%;
+}
+.no-padding{
+    padding: 0;
+}
+.img-angle-en{
+    position: absolute;
+    right: 0;
+    top: 0
+}
+.img-angle-en-bottom{
+    position: absolute;
+    right: 0;
+    bottom: 0
+}
+.anker-logo{
+    margin-top: 10px;
+}
+.btn-custom{
+    background: #ffffff;
+    border-radius: 7px;
+    display: inline-block;
+    padding: 5px;
+    margin-right: 5px;
+}
+.bottom-link{
+    margin-top: 48px
+}
+.bottom-link-img{
+    height: 40px
+}
+.author{
+    font-size: 24px;
+    color: #fff;
+    margin-top: 5px;
+}
+.ipower{
+    color: #00BEFA;
+    font-size: 6vw;
+    margin-left: 70px;
+    margin-top: 150px;
+    line-height: 110px;
+}
+.experience{
+    color: #444;
+    font-size: 2vw;
+    margin-left: 70px;
+    margin-top: 20px;
+    line-height: 40px;
+}
+.image-angle-en{
+    width: 273px;
+    height: 145px;
+    background: url(../images/group-124720.png);
+}
+.image-angle-en-bottom{
+    width: 273px;
+    height: 145px;
+    background: url(../images/group-124720.png);
+}
+.lang-txt{
+    color: #fff;
+    font-size: 21px;
+}
+.lang-pad{
+    padding-top: 40px;
+}
+.lucky-blue{
+    margin-left: 70px;
+    margin-top: 90px;
+    background: #00BEFA;
+    border-color:#00BEFA;
+}
+.vertical-line{
+    height: 40px;
+    display: inline !important;
+}
+.author-txt{
+    text-align: right !important;
+}
+.lang-sec{
+    margin-left: 80px;
+}
+@media (max-width: 480px) {
+    .logo{
+        width: 100px;
+        margin-top:15px;
+        margin-left: 5px;
+    }
+    .ipower{
+        line-height: normal;
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    .experience{
+        line-height: normal;
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+    .lucky-blue{
+        margin-top: 20px;
+        margin-left: 20px;
+        font-size: 10px;
+    }
+    .btn-custom{
+        margin-bottom: 10px;
+    }
+    .footer{
+        height: auto;
+    }
+    .author-txt{
+        text-align: center !important;
+    }
+    .btn-sec{
+        margin-left: -20px;
+    }
+    .vertical-line{
+        height: 20px;
+    }
+    .heading-xs{
+        width: 120px;
+        margin-left: 5px;
+        margin-top: 5px;
+    }
+    .lang-txt{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 767px) {
+    .logo{
+        width: 120px;
+        margin-top:10px;
+        margin-left: 15px;
+    }
+    .ipower{
+        line-height: normal;
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    .experience{
+        line-height: normal;
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+    .lucky-blue{
+        margin-top: 20px;
+        margin-left: 20px;
+        font-size: 10px;
+    }
+    .btn-custom{
+        margin-bottom: 10px;
+    }
+    .footer{
+        height: auto;
+    }
+    .author-txt{
+        text-align: center !important;
+    }
+    .btn-sec{
+        margin-left: -20px;
+    }
+    .vertical-line{
+        height: 20px;
+    }
+    .heading-xs{
+        width: 128px;
+        margin-left: 15px;
+        margin-top: 10px;
+    }
+    .lang-txt{
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+    .ipower{
+        line-height: normal;
+        margin-top: 20px;
+        margin-left: 70px;
+    }
+    .experience{
+        line-height: normal;
+        margin-top: 10px;
+        margin-left: 70px;
+    }
+    .lucky-blue{
+        margin-top: 20px;
+        margin-left: 70px;
+        font-size: 12px;
+    }
+    .footer{
+        height: auto;
+    }
+    .btn-custom{
+        margin-bottom: 10px;
+    }
+    .bottom-link-img{
+        height: 28px;
+    }
+    .bottom-link{
+        margin-top: 25px;
+    }
+}
+
+@media (max-width: 979px) {
+    .bottom-link-img{
+        height: 28px;
+    }
+    .bottom-link{
+        margin-top: 25px;
+    }
+}
+
+@media (min-width: 980px) and (max-width: 1279px) {
+    .ipower{
+        line-height: normal;
+        margin-top: 20px;
+        margin-left: 70px;
+    }
+    .experience{
+        line-height: normal;
+        margin-top: 10px;
+        margin-left: 70px;
+    }
+    .lucky-blue{
+        margin-top: 20px;
+        margin-left: 70px;
+    }
+    .footer{
+        height: auto;
+    }
+    .btn-custom{
+        margin-bottom: 10px;
+    }
+    .bottom-link-img{
+        height: 32px;
+    }
+    .bottom-link{
+        margin-top: 25px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .btn-custom{
+        margin-bottom: 10px;
+    }
+    .bottom-link-img{
+        height: 25px;
+    }
+    .bottom-link{
+        margin-top: 55px;
+    }
+}
+
+@media (min-width: 1480px){
+    .bottom-link-img{
+        height: 28px;
+    }
+}
+
+@media (min-width: 1669px){
+    .bottom-link-img{
+        height: 36px;
+    }
+}
