@@ -34,6 +34,8 @@ body{
     background: #F3F3F3;
     background-image: linear-gradient(#F3F3F3, #F3F3F3);
     overflow-x: hidden;
+/*    width: 90%;*/
+    margin: 0 auto;
 }
 .DINNextLTPro-Bold {
     font-family: 'DINNextLTPro-Bold';
