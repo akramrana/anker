@@ -9,6 +9,7 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\GiftClaims;
 
 class SiteController extends Controller
 {
@@ -73,6 +74,19 @@ class SiteController extends Controller
         return $this->render('index');
     }
 
+    public function actionSpinWheel() {
+        $this->layout = 'site_main';
+        return $this->render('spin-wheel');
+    }
+
+    public function actionGiftClaim() {
+        $this->layout = 'site_main';
+        $model = new GiftClaims();
+        return $this->render('gift-claim', [
+                    'model' => $model,
+        ]);
+    }
+
     /**
      * Login action.
      *
@@ -85,7 +99,8 @@ class SiteController extends Controller
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->redirect(['dashboard/index']);;
+            return $this->redirect(['dashboard/index']);
+            ;
         }
 
         $model->password = '';
@@ -102,7 +117,8 @@ class SiteController extends Controller
     public function actionLogout() {
         Yii::$app->user->logout();
 
-        return $this->redirect(['site/login']);;
+        return $this->redirect(['site/login']);
+        ;
     }
 
     /**
@@ -130,7 +146,7 @@ class SiteController extends Controller
     public function actionAbout() {
         return $this->render('about');
     }
-    
+
     public function actionChangeLanguage() {
         if (isset($_GET) && $_GET['lang'] != '') {
             Yii::$app->session->set('lang', $_GET['lang']);

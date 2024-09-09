@@ -23,12 +23,13 @@ class FrontendAsset extends \yii\web\AssetBundle
         'admin_lte/plugins/icheck-bootstrap/icheck-bootstrap.min.css',
         'https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css',
         'admin_lte/dist/css/adminlte.min.css',
-        'css/custom.css'
+        'css/custom.css',
     ];
     
     public $js = [
         'admin_lte/plugins/bootstrap/js/bootstrap.bundle.min.js',
-        'js/site.js'
+        'js/lottery-wheel.min.js',
+        'js/site.js',
     ];
     
     public $depends = [
