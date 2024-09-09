@@ -34,7 +34,7 @@ body{
     background: #F3F3F3;
     background-image: linear-gradient(#F3F3F3, #F3F3F3);
     overflow-x: hidden;
-/*    width: 90%;*/
+    /*    width: 90%;*/
     margin: 0 auto;
 }
 .DINNextLTPro-Bold {
@@ -143,6 +143,7 @@ body{
 }
 .author-txt{
     text-align: right !important;
+    margin-right: -50px;
 }
 .lang-sec{
     margin-left: 80px;
@@ -156,6 +157,9 @@ body{
     width: 273px;
     height: 145px;
     background: url(../images/group-124719.png);
+}
+.btn-sec{
+    margin-left: 70px;
 }
 @media (max-width: 345px) {
     .ipower{
@@ -353,6 +357,7 @@ body{
 @media (min-width: 1480px){
     .ipower{
         line-height: normal;
+        font-size: 100px;
     }
     .bottom-link-img{
         height: 28px;
@@ -362,5 +367,9 @@ body{
 @media (min-width: 1669px){
     .bottom-link-img{
         height: 36px;
+    }
+    .ipower{
+        line-height: normal;
+        font-size: 125px;
     }
 }
