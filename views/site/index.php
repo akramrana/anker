@@ -8,11 +8,13 @@ $titleFont = "DINNextLTPro-Bold";
 $experienceFont = "MyriadPro-Regular";
 $luckyBlueFont = "DINNextLTPro-Regular";
 $luckyBlueFloat = "";
+$phoneImg = "Microsite_07";
 if (Yii::$app->session['lang'] == 'ar') {
     $titleFont = "GESSTwoBold";
     $experienceFont = "GESSTwoMedium";
     $luckyBlueFont = "GESSTwoMedium";
     $luckyBlueFloat = "float-right";
+    $phoneImg = "Microsite-2_03";
 }
 ?>
 <div class="row">
@@ -32,6 +34,6 @@ if (Yii::$app->session['lang'] == 'ar') {
         </p>
     </div>
     <div class="col-8">
-        <img class="img-fluid float-right" src="<?php echo BaseUrl::home(); ?>images/Microsite_07.png" alt="Microsite_07" />
+        <img class="img-fluid float-right" src="<?php echo BaseUrl::home(); ?>images/<?php echo $phoneImg; ?>.png" alt="Microsite_07" />
     </div>
 </div>
