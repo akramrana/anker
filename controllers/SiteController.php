@@ -12,6 +12,7 @@ use app\models\ContactForm;
 use app\models\GiftClaims;
 use app\models\LoginCodes;
 use app\models\Items;
+use yii\web\UploadedFile;
 
 class SiteController extends Controller
 {
@@ -73,12 +74,14 @@ class SiteController extends Controller
      */
     public function actionIndex() {
         Yii::$app->session->remove('sku');
+        Yii::$app->session->remove('code');
         $this->layout = 'site_main';
         return $this->render('index');
     }
 
     public function actionSpinWheel($loginCode) {
         Yii::$app->session->remove('sku');
+        Yii::$app->session->remove('code');
         $model = \app\models\LoginCodes::find()
                 ->where(['code' => $loginCode, 'used' => 0, 'is_active' => 1, 'is_deleted' => 0])
                 ->one();
@@ -95,10 +98,61 @@ class SiteController extends Controller
 
     public function actionGiftClaim() {
         $this->layout = 'site_main';
+        $sessionSku = Yii::$app->session['sku'];
+        $sessionCode = Yii::$app->session['code'];
         $model = new GiftClaims();
-        $model->item_code = Yii::$app->session['sku'];
+        $model->item_code = $sessionSku;
+        $model->created_at = date('Y-m-d H:i:s');
+        //
+        $item = Items::find()
+                ->where(['is_active' => 1, 'is_deleted' => 0, 'sku' => $sessionSku])
+                ->andWhere('remaining_qty > 0')
+                ->one();
+        if ($this->request->isPost) {
+            $directory = \Yii::getAlias('@app/web/uploads') . DIRECTORY_SEPARATOR;
+            if ($model->load($this->request->post())) {
+                $imageFile = UploadedFile::getInstance($model, 'invoice_file');
+                if (!empty($imageFile)) {
+                    if ($imageFile) {
+                        $filetype = mime_content_type($imageFile->tempName);
+                        $allowed = array('image/png', 'image/jpeg', 'image/gif');
+                        if (!in_array(strtolower($filetype), $allowed)) {
+                            
+                        } else {
+                            $uid = uniqid(time(), true);
+                            $fileName = $uid . '.' . $imageFile->extension;
+                            $filePath = $directory . $fileName;
+                            if ($imageFile->saveAs($filePath)) {
+                                $model->invoice_file = $fileName;
+                            }
+                        }
+                    }
+                }
+                if ($model->save()) {
+                    $loginCode = \app\models\LoginCodes::find()
+                            ->where(['code' => $sessionCode, 'used' => 0, 'is_active' => 1, 'is_deleted' => 0])
+                            ->one();
+                    if (!empty($loginCode)) {
+                        $loginCode->used = 1;
+                        $loginCode->used_at = date('Y-m-d H:i:s');
+                        $loginCode->save(false);
+                    }
+                    if (!empty($item)) {
+                        $oldQty = $item->remaining_qty;
+                        $newQty = $oldQty - 1;
+                        $item->remaining_qty = $newQty;
+                        $item->updated_at = date('Y-m-d H:i:s');
+                        $item->save(false);
+                    }
+                    Yii::$app->session->setFlash('success', 'Gift request successfully send');
+                    return $this->redirect(['gift-claim']);
+                }
+            }
+        }
         return $this->render('gift-claim', [
                     'model' => $model,
+                    'sessionSku' => $sessionSku,
+                    'item' => $item,
         ]);
     }
 
@@ -176,17 +230,20 @@ class SiteController extends Controller
                     ->one();
             if (!empty($model)) {
                 Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
-                return ['success' => 1, 'msg' => 'Verification successfull', 'code' => $model->code];
+                return ['success' => 1, 'msg' => 'Verification successful, Redirecting...', 'code' => $model->code];
             } else {
                 Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
                 return ['success' => 0, 'msg' => 'Verification failed: Invalid login code'];
             }
         }
     }
-    
+
     public function actionClaimWiningItem() {
         if (isset($_GET) && $_GET['sku'] != '') {
             Yii::$app->session->set('sku', $_GET['sku']);
+        }
+        if (isset($_GET) && $_GET['code'] != '') {
+            Yii::$app->session->set('code', $_GET['code']);
         }
     }
 }

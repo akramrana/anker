@@ -34,14 +34,14 @@ $jsonData = json_encode($data);
                     ?>
                     <div class="gui-wrapper">
                         <div class="wheel-wrapper"></div>
-                        <button class="btn btn-primary btn-lg mb-3">Spin</button>
+                        <button class="btn btn-primary btn-lg mb-3 theme-bg">Try My Luck</button>
                     </div>
                     <div class="col d-none mb-3" id="won-section">
                         <div class="alert alert-default">
                             Hurry: you have won the <strong><span id="itemName"></span></strong>
                             <input type="hidden" id="item_sku" name="item_sku" value=""/>
                         </div>
-                        <a onclick="site.claimGift()" href="javascript:;" class="btn btn-warning text-white">Claim your gift</a>
+                        <a onclick="site.claimGift('<?= $model->code; ?>')" href="javascript:;" class="btn btn-lg btn-danger text-white">Claim your gift</a>
                     </div>
                     <?php
                 } else {
@@ -60,12 +60,11 @@ $jsonData = json_encode($data);
 </div>
 
 <?php
-
 $js = "
     const img1 = new Image();
     img1.src = baseUrl+'images/example-3-overlay.svg';
     img1.alt = 'alt';
-    
+    var items = $jsonData;
     window.onload = () => {
       const props = {
         name: 'Money',
@@ -80,10 +79,20 @@ $js = "
         lineWidth: 1,
         lineColor: '#000',
         overlayImage: img1,
-        items: $jsonData,
+        items: items,
       };
       const container = document.querySelector('.wheel-wrapper');
       window.wheel = new spinWheel.Wheel(container, props);
+      wheel.isInteractive = false;
+      //
+      wheel.onRest = e => {
+        var data = items[e.currentIndex]
+        if(data.sku){
+            $('#won-section').removeClass('d-none');
+            $('#itemName').html(data.label);
+            $('#item_sku').val(data.sku);
+        }
+      };
       const btnSpin = document.querySelector('button');
       let modifier = 0;
       window.addEventListener('click', (e) => {
@@ -107,5 +116,5 @@ $js = "
       }
     }";
 
-$this->registerJs($js,\yii\web\View::POS_END);
+$this->registerJs($js, \yii\web\View::POS_END);
 ?>

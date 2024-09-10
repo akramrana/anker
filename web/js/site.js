@@ -23,14 +23,15 @@ var site = {
       })
     }
   },
-  claimGift: function () {
+  claimGift: function (code) {
     var sku = $("#item_sku").val();
     if ($.trim(sku) != '') {
       $.ajax({
         type: "GET",
         url: baseUrl + 'site/claim-wining-item',
         data: {
-          'sku': sku
+          'sku': sku,
+          'code': code,
         },
         success: function ()
         {

@@ -188,6 +188,10 @@ text{
   height: 100%;
   width: 100%;
 }
+.theme-bg{
+    background: #00BEFA;
+    border-color: #00BEFA;
+}
 @media (max-width: 345px) {
     .ipower{
         font-size: 22px !important;

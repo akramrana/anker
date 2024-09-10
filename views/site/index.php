@@ -52,8 +52,8 @@ if (Yii::$app->session['lang'] == 'ar') {
                         ]
             ]);
             ?>
-            <div class="modal-header">
-                <h4 class="modal-title">Authorization</h4>
+            <div class="modal-header theme-bg">
+                <h4 class="modal-title text-white">Authorization</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -64,7 +64,7 @@ if (Yii::$app->session['lang'] == 'ar') {
             </div>
             <div class="modal-footer justify-content-between">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary">Save changes</button>
+                <button type="submit" class="btn btn-primary theme-bg">Save changes</button>
             </div>
             <?php ActiveForm::end(); ?>
         </div>

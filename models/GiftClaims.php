@@ -42,9 +42,10 @@ class GiftClaims extends \yii\db\ActiveRecord
     {
         return [
             [['first_name', 'email', 'phone', 'address_line_1', 'landmark', 'city', 'item_code', 'purchase_place', 'invoice_file', 'created_at'], 'required'],
-            [['purchase_date', 'created_at'], 'safe'],
+            [['purchase_date', 'created_at', 'invoice_file'], 'safe'],
             [['is_deleted', 'is_contacted', 'is_processed'], 'integer'],
-            [['first_name', 'last_name', 'email', 'phone', 'address_line_1', 'address_line_2', 'landmark', 'city', 'item_code', 'purchase_place', 'invoice_file'], 'string', 'max' => 100],
+            [['first_name', 'last_name', 'email', 'phone', 'address_line_1', 'address_line_2', 'landmark', 'city', 'item_code', 'purchase_place'], 'string', 'max' => 100],
+            [['invoice_file'], 'file'],
         ];
     }
 
