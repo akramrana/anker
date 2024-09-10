@@ -8,8 +8,9 @@ $this->title = 'Claim your gift';
 ?>
 <div class="row">
     <div class="container">
-        <div class="card mt-3">
-            <div class="card-body">
+        <div class="mt-3">
+            <div class="claim-gift">
+                <h2 class="draw-title DINNextLTPro-Bold"><?= Yii::t('yii', 'Claim your gift'); ?></h2>
                 <?php $form = ActiveForm::begin(); ?>
                 <div class="row">
                     <div class="col">
@@ -21,7 +22,7 @@ $this->title = 'Claim your gift';
                         
                          <?= $form->field($model, 'landmark')->textInput(['maxlength' => true]) ?>
                         
-                        <?= $form->field($model, 'item_code')->textInput(['maxlength' => true]) ?>
+                        <?= $form->field($model, 'item_code')->textInput(['maxlength' => true,'readonly' => 'readonly']) ?>
                         
                         <?= $form->field($model, 'purchase_place')->textInput(['maxlength' => true]) ?>
                     </div>
@@ -34,7 +35,7 @@ $this->title = 'Claim your gift';
                         
                         <?= $form->field($model, 'city')->textInput(['maxlength' => true]) ?>
                         
-                        <?= $form->field($model, 'purchase_date')->textInput() ?>
+                        <?= $form->field($model, 'purchase_date')->textInput(['type' => 'date']) ?>
                         
                         <?= $form->field($model, 'invoice_file')->fileInput() ?>
                     </div>

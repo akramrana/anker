@@ -161,6 +161,27 @@ body{
 .btn-sec{
     margin-left: 70px;
 }
+text{
+    font-size: 13px;
+}
+.lucky-draw-box{
+    display: block;
+    text-align: center;
+    min-height: 620px;
+    margin: 0 auto
+}
+.draw-title{
+    color: #00BEFA;
+    margin-bottom: 25px;
+    font-size: 50px;
+    text-align: center;
+}
+.claim-gift{
+    display: block;
+    min-height: 620px;
+    padding: 10px;
+    margin: 0 auto
+}
 @media (max-width: 345px) {
     .ipower{
         font-size: 22px !important;

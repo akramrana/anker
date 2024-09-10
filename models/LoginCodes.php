@@ -47,7 +47,7 @@ class LoginCodes extends \yii\db\ActiveRecord
     {
         return [
             'login_code_id' => 'Login Code ID',
-            'code' => 'Code',
+            'code' => 'Login Code',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
             'used_at' => 'Used At',

@@ -10,6 +10,8 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\GiftClaims;
+use app\models\LoginCodes;
+use app\models\Items;
 
 class SiteController extends Controller
 {
@@ -70,18 +72,31 @@ class SiteController extends Controller
      * @return string
      */
     public function actionIndex() {
+        Yii::$app->session->remove('sku');
         $this->layout = 'site_main';
         return $this->render('index');
     }
 
-    public function actionSpinWheel() {
+    public function actionSpinWheel($loginCode) {
+        Yii::$app->session->remove('sku');
+        $model = \app\models\LoginCodes::find()
+                ->where(['code' => $loginCode, 'used' => 0, 'is_active' => 1, 'is_deleted' => 0])
+                ->one();
+        $items = Items::find()
+                ->where(['is_active' => 1, 'is_deleted' => 0])
+                ->andWhere('remaining_qty > 0')
+                ->all();
         $this->layout = 'site_main';
-        return $this->render('spin-wheel');
+        return $this->render('spin-wheel', [
+                    'model' => $model,
+                    'items' => $items
+        ]);
     }
 
     public function actionGiftClaim() {
         $this->layout = 'site_main';
         $model = new GiftClaims();
+        $model->item_code = Yii::$app->session['sku'];
         return $this->render('gift-claim', [
                     'model' => $model,
         ]);
@@ -150,6 +165,28 @@ class SiteController extends Controller
     public function actionChangeLanguage() {
         if (isset($_GET) && $_GET['lang'] != '') {
             Yii::$app->session->set('lang', $_GET['lang']);
+        }
+    }
+
+    public function actionVerifyCode() {
+        if (Yii::$app->request->isAjax) {
+            $request = Yii::$app->request->post();
+            $model = \app\models\LoginCodes::find()
+                    ->where(['code' => $request['LoginCodes']['code'], 'used' => 0, 'is_active' => 1, 'is_deleted' => 0])
+                    ->one();
+            if (!empty($model)) {
+                Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+                return ['success' => 1, 'msg' => 'Verification successfull', 'code' => $model->code];
+            } else {
+                Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+                return ['success' => 0, 'msg' => 'Verification failed: Invalid login code'];
+            }
+        }
+    }
+    
+    public function actionClaimWiningItem() {
+        if (isset($_GET) && $_GET['sku'] != '') {
+            Yii::$app->session->set('sku', $_GET['sku']);
         }
     }
 }

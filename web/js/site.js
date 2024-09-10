@@ -23,31 +23,23 @@ var site = {
       })
     }
   },
-}
-
-new Wheel({
-  el: document.getElementById('wheel4'),
-  data: [
-    {
-      text: 'Beijing',
-      color: 'silver',
-      fontSize: 24
-    },
-    {
-      text: 'London',
-      fontColor: '#008000'
-    }, 
-    'New York', 
-    'Tokyo'
-  ],
-  theme: 'light',
-  radius: 150,
-  buttonWidth: 75,
-  color: {
-    button: '#fef5e7',
-    buttonFont: '#34495e'
-  },
-  onSuccess(data) {
-    console.log(data);
+  claimGift: function () {
+    var sku = $("#item_sku").val();
+    if ($.trim(sku) != '') {
+      $.ajax({
+        type: "GET",
+        url: baseUrl + 'site/claim-wining-item',
+        data: {
+          'sku': sku
+        },
+        success: function ()
+        {
+          location.href = baseUrl + 'site/gift-claim';
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+          alert(jqXHR.responseText);
+        }
+      })
+    }
   }
-});
+}
