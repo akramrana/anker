@@ -6,18 +6,18 @@ $this->title = 'Lucky Draw';
 $data = [];
 if (!empty($items)) {
     $d = [
-        'text' => 'No Luck',
+        'label' => 'No Luck',
         'sku' => '',
-        'color' => 'dimgray',
-        'fontColor' => 'silver'
+        'backgroundColor' => 'dimgray',
+        'labelColor' => 'silver'
     ];
     array_push($data, $d);
     foreach ($items as $key => $row) {
         $d = [
-            'text' => $row->name_en,
+            'label' => $row->name_en,
             'sku' => $row->sku,
-            'color' => ($key % 2 == 1) ? '#0096FF' : 'lightyellow',
-            'fontColor' => ($key % 2 == 1) ? '#fff' : 'orange'
+            'backgroundColor' => ($key % 2 == 1) ? '#0096FF' : 'lightyellow',
+            'labelColor' => ($key % 2 == 1) ? '#fff' : 'orange'
         ];
         array_push($data, $d);
     }
@@ -32,8 +32,10 @@ $jsonData = json_encode($data);
                 <?php
                 if (!empty($model)) {
                     ?>
-                    <svg id="wheel4" class="mb-3"></svg>
-
+                    <div class="gui-wrapper">
+                        <div class="wheel-wrapper"></div>
+                        <button class="btn btn-primary btn-lg mb-3">Spin</button>
+                    </div>
                     <div class="col d-none mb-3" id="won-section">
                         <div class="alert alert-default">
                             Hurry: you have won the <strong><span id="itemName"></span></strong>
@@ -58,28 +60,52 @@ $jsonData = json_encode($data);
 </div>
 
 <?php
-$js = "new Wheel({
-  el: document.getElementById('wheel4'),
-  data: $jsonData,
-  theme: 'light',
-  radius: 220,
-  buttonWidth: 75,
-  limit:3,
-  color: {
-    button: '#fef5e7',
-    buttonFont: '#34495e',
-    line: '#fff',
-    border: '#0082FF',
-    prize: '#ffffff',
-    prizeFont: '#00000',
-  },
-  onSuccess(data) {
-    console.log(data);
-    $('#won-section').removeClass('d-none');
-    $('#itemName').html(data.text);
-    $('#item_sku').val(data.sku);
-  }
-});";
 
-$this->registerJs($js, \yii\web\View::POS_END);
+$js = "
+    const img1 = new Image();
+    img1.src = baseUrl+'images/example-3-overlay.svg';
+    img1.alt = 'alt';
+    
+    window.onload = () => {
+      const props = {
+        name: 'Money',
+        radius: 0.88,
+        itemLabelRadius: 0.93,
+        itemLabelRotation: 180,
+        itemLabelAlign: 'left',
+        itemLabelColors: ['#000'],
+        itemLabelBaselineOffset: -0.06,
+        itemLabelFont: 'Arial',
+        itemLabelFontSizeMax: 22,
+        lineWidth: 1,
+        lineColor: '#000',
+        overlayImage: img1,
+        items: $jsonData,
+      };
+      const container = document.querySelector('.wheel-wrapper');
+      window.wheel = new spinWheel.Wheel(container, props);
+      const btnSpin = document.querySelector('button');
+      let modifier = 0;
+      window.addEventListener('click', (e) => {
+        // Listen for click event on spin button:
+        if (e.target === btnSpin) {
+          const {duration, winningItemRotaion} = calcSpinToValues();
+          wheel.spinTo(winningItemRotaion, duration);
+        }
+      });
+      function calcSpinToValues() {
+        const duration = 3000;
+        const winningItemRotaion = getRandomInt(360, 360 * 1.75) + modifier;
+        modifier += 360 * 1.75;
+        return {duration, winningItemRotaion};
+      }
+      
+      function getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min)) + min;
+      }
+    }";
+
+$this->registerJs($js,\yii\web\View::POS_END);
 ?>

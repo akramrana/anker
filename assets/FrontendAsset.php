@@ -28,7 +28,7 @@ class FrontendAsset extends \yii\web\AssetBundle
     
     public $js = [
         'admin_lte/plugins/bootstrap/js/bootstrap.bundle.min.js',
-        'js/lottery-wheel.min.js',
+        'js/spin-wheel-iife.js',
         'js/site.js',
     ];
     
