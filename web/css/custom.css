@@ -162,7 +162,8 @@ body{
     margin-left: 70px;
 }
 text{
-    font-size: 13px;
+    font-size: 15px;
+    font-family: 'DINNextLTPro-Bold';
 }
 .lucky-draw-box{
     display: block;

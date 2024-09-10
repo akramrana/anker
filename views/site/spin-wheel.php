@@ -5,11 +5,19 @@ use yii\helpers\BaseUrl;
 $this->title = 'Lucky Draw';
 $data = [];
 if (!empty($items)) {
-    foreach ($items as $row) {
+    $d = [
+        'text' => 'No Luck',
+        'sku' => '',
+        'color' => 'dimgray',
+        'fontColor' => 'silver'
+    ];
+    array_push($data, $d);
+    foreach ($items as $key => $row) {
         $d = [
             'text' => $row->name_en,
             'sku' => $row->sku,
-            'fontSize' => 8,
+            'color' => ($key % 2 == 1) ? '#0096FF' : 'lightyellow',
+            'fontColor' => ($key % 2 == 1) ? '#fff' : 'orange'
         ];
         array_push($data, $d);
     }
@@ -26,7 +34,7 @@ $jsonData = json_encode($data);
                     ?>
                     <svg id="wheel4" class="mb-3"></svg>
 
-                    <div class="col d-none" id="won-section">
+                    <div class="col d-none mb-3" id="won-section">
                         <div class="alert alert-default">
                             Hurry: you have won the <strong><span id="itemName"></span></strong>
                             <input type="hidden" id="item_sku" name="item_sku" value=""/>
@@ -54,14 +62,14 @@ $js = "new Wheel({
   el: document.getElementById('wheel4'),
   data: $jsonData,
   theme: 'light',
-  radius: 170,
+  radius: 220,
   buttonWidth: 75,
   limit:3,
   color: {
     button: '#fef5e7',
     buttonFont: '#34495e',
-    line: '#e41e27',
-    border: '#e41e27',
+    line: '#fff',
+    border: '#0082FF',
     prize: '#ffffff',
     prizeFont: '#00000',
   },
