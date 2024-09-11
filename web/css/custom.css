@@ -96,7 +96,7 @@ body{
     height: 40px
 }
 .author{
-    font-size: 24px;
+    font-size: 20px;
     color: #fff;
     margin-top: 5px;
 }
@@ -184,9 +184,9 @@ text{
     margin: 0 auto
 }
 .wheel-wrapper {
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
 }
 .theme-bg{
     background: #00BEFA;
@@ -195,6 +195,15 @@ text{
 @media (max-width: 345px) {
     .ipower{
         font-size: 22px !important;
+    }
+    .site-footer{
+        position: fixed;
+        bottom: 0;
+    }
+}
+@media (max-width: 430px) {
+    .btn-sec{
+        margin-left: 5px !important;
     }
 }
 @media (max-width: 480px) {
@@ -231,7 +240,8 @@ text{
         text-align: center !important;
     }
     .btn-sec{
-        margin-left: -20px;
+        margin-left: 0px;
+        text-align: center !important;
     }
     .vertical-line{
         height: 20px;
@@ -244,8 +254,38 @@ text{
     .lang-txt{
         font-size: 12px;
     }
+    .site-footer{
+        position: fixed;
+        bottom: 0;
+    }
+    .header{
+        height: 105px;
+    }
+    .image-angle-en{
+        height: 105px;
+        width: 230px;
+    }
+    .bottom-link-img{
+        height: 20px !important;
+    }
+    .no-padding-right{
+        padding-right: 0px;
+    }
 }
-
+@media (max-width: 540px) {
+    .header{
+        height: 105px;
+    }
+    .footer{
+        min-height: 105px !important;
+    }
+    .btn-sec{
+        margin-left: 23px;
+    }
+    .bottom-link-img{
+        height: 25px !important;
+    }
+}
 @media (max-width: 767px) {
     .logo{
         width: 120px;
@@ -277,9 +317,11 @@ text{
     }
     .author-txt{
         text-align: center !important;
+        margin-right: 0;
+        margin-bottom: 5px;
     }
     .btn-sec{
-        margin-left: -20px;
+        /*        margin-left: -20px;*/
     }
     .vertical-line{
         height: 20px;
@@ -291,6 +333,10 @@ text{
     }
     .lang-txt{
         font-size: 18px;
+    }
+    .site-footer{
+        position: fixed;
+        bottom: 0;
     }
 }
 
@@ -319,10 +365,20 @@ text{
         margin-bottom: 10px;
     }
     .bottom-link-img{
-        height: 28px;
+        height: 20px !important;
     }
     .bottom-link{
         margin-top: 25px;
+    }
+    .site-footer{
+        position: fixed;
+        bottom: 0;
+    }
+    .header{
+        height: 125px;
+    }
+    .footer{
+        height: 125px;
     }
 }
 
@@ -359,7 +415,7 @@ text{
         margin-bottom: 10px;
     }
     .bottom-link-img{
-        height: 32px;
+        height: 28px;
     }
     .bottom-link{
         margin-top: 25px;
