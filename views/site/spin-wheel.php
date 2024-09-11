@@ -5,19 +5,19 @@ use yii\helpers\BaseUrl;
 $this->title = 'Lucky Draw';
 $data = [];
 if (!empty($items)) {
-    $d = [
+    /*$d = [
         'label' => 'No Luck',
         'sku' => '',
         'backgroundColor' => 'dimgray',
         'labelColor' => 'silver'
     ];
-    array_push($data, $d);
+    array_push($data, $d);*/
     foreach ($items as $key => $row) {
         $d = [
             'label' => $row->name_en,
             'sku' => $row->sku,
             'backgroundColor' => ($key % 2 == 1) ? '#00AAFF' : '#00BEFA',
-            'labelColor' => ($key % 2 == 1) ? '#fff' : '#fff'
+            'labelColor' => ($key % 2 == 1) ? '#fff' : '#fff',
         ];
         array_push($data, $d);
     }
@@ -118,6 +118,8 @@ $js = "
         lineColor: '#fff',
         overlayImage: img1,
         items: items,
+        itemLabelFont:'DINNextLTPro-Regular',
+        itemLabelFontSizeMax:17,
       };
       const container = document.querySelector('.wheel-wrapper');
       window.wheel = new spinWheel.Wheel(container, props);
