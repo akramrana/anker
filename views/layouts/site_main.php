@@ -92,7 +92,7 @@ if (Yii::$app->session['lang'] == 'ar') {
                 <div class="footer">
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-8 col-lg-9">
-                            <div class="row bottom-link ml-5">
+                            <div class="row bottom-link ml-lg-5">
                                 <div class="col-xs-12 col-sm-12 col-md-3 col-lg-5">
                                     <div class="author-txt">
                                         <span class="<?=$authorFont;?> author">
@@ -100,7 +100,7 @@ if (Yii::$app->session['lang'] == 'ar') {
                                         </span>
                                     </div>
                                 </div>
-                                <div class="col-xs-12 col-sm-12 col-md-9 col-lg-7">
+                                <div class="col-xs-12 col-sm-12 col-md-9 col-lg-7 no-padding-right">
                                     <div class="<?= $textLeft; ?> btn-sec">
                                         <a href="#" class="btn-custom">
                                             <img class="bottom-link-img" src="<?php echo BaseUrl::home(); ?>images/Microsite_07.gif" alt="external link" />
