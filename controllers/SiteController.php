@@ -75,6 +75,7 @@ class SiteController extends Controller
     public function actionIndex() {
         Yii::$app->session->remove('sku');
         Yii::$app->session->remove('code');
+        Yii::$app->session->remove('form_submitted');
         $this->layout = 'site_main';
         return $this->render('index');
     }
@@ -144,7 +145,8 @@ class SiteController extends Controller
                         $item->updated_at = date('Y-m-d H:i:s');
                         $item->save(false);
                     }
-                    Yii::$app->session->setFlash('success', Yii::t('yii', 'Gift request successfully send'));
+                    Yii::$app->session->setFlash('success', Yii::t('yii', 'Gift request successfully sent!'));
+                    Yii::$app->session->set('form_submitted', 1);
                     return $this->redirect(['gift-claim']);
                 }
             }

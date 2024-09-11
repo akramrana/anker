@@ -33,23 +33,23 @@ if (Yii::$app->session['lang'] == 'ar') {
     $btnFont = "GESSTwoMedium";
 }
 ?>
-<div class="row" dir="<?=$dir;?>">
+<div class="row" dir="<?= $dir; ?>">
     <div class="container">
         <div class="mt-3">
             <div class="lucky-draw-box">
-                <h2 class="draw-title <?=$titleFont;?>"><?= Yii::t('yii', 'Participate in Lucky Draw'); ?></h2>
+                <h2 class="draw-title <?= $titleFont; ?>"><?= Yii::t('yii', 'Participate in Lucky Draw'); ?></h2>
                 <?php
                 if (!empty($model)) {
                     ?>
                     <div class="gui-wrapper">
                         <div class="wheel-wrapper"></div>
-                        <button class="btn btn-primary btn-lg mb-3 theme-bg <?=$btnFont;?>"><?= Yii::t('yii', 'Try My Luck'); ?></button>
+                        <button class="btn btn-primary btn-lg mb-3 theme-bg <?= $btnFont; ?>"><?= Yii::t('yii', 'Try My Luck'); ?></button>
                     </div>
                     <?php
                 } else {
                     ?>
                     <div class="col">
-                        <div class="alert alert-danger <?=$btnFont;?>">
+                        <div class="alert alert-danger <?= $btnFont; ?>">
                             <?= Yii::t('yii', 'Verification failed: Invalid login code'); ?>
                         </div>
                     </div>
@@ -64,30 +64,32 @@ if (Yii::$app->session['lang'] == 'ar') {
 <div class="modal fade" id="modal-default" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-header theme-bg">
-                <h4 class="modal-title text-white <?=$btnFont;?>"><?= Yii::t('yii', 'Congratulations!'); ?></h4>
-                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="row">
-                <?php
-                if (!empty($model)) {
-                    ?>
+            <?php
+            if (!empty($model)) {
+                ?>
+                <div class="modal-header theme-bg">
+                    <h4 class="modal-title text-white <?= $btnFont; ?>"><?= Yii::t('yii', 'Congratulations!'); ?></h4>
+                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="row">
+
                     <div class="col d-none mb-3 text-center pt-3" id="won-section">
-                        <div class="alert alert-default <?=$btnFont;?>">
+                        <div class="alert alert-default <?= $btnFont; ?>">
                             <?= Yii::t('yii', 'Hurry: you have won the'); ?> <strong><span id="itemName"></span></strong>
                             <input type="hidden" id="item_sku" name="item_sku" value=""/>
                         </div>
                     </div>
-                    <?php
-                }
-                ?>
-            </div>
-            <div class="modal-footer justify-content-between">
-                <button type="button" class="btn btn-default" data-dismiss="modal"><?= Yii::t('yii', 'Close'); ?></button>
-                <button onclick="site.claimGift('<?= $model->code; ?>')"  type="button" class="btn btn-primary theme-bg <?=$btnFont;?>"><?= Yii::t('yii', 'Claim your gift'); ?></button>
-            </div>
+
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-default" data-dismiss="modal"><?= Yii::t('yii', 'Close'); ?></button>
+                    <button onclick="site.claimGift('<?= $model->code; ?>')"  type="button" class="btn btn-primary theme-bg <?= $btnFont; ?>"><?= Yii::t('yii', 'Claim your gift'); ?></button>
+                </div>
+                <?php
+            }
+            ?>
         </div>
         <!-- /.modal-content -->
     </div>

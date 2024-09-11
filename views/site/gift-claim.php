@@ -23,48 +23,50 @@ if (Yii::$app->session['lang'] == 'ar') {
             <div class="claim-gift">
                 <?php
                 if (!empty($sessionSku)) {
-                    ?>
-                    <h3 class="draw-title <?= $titleFont; ?>"><?= Yii::t('yii', 'You have won the'); ?> <strong><u><?= $item->name_en; ?></u></strong> <?= Yii::t('yii', 'from lucky draw, claim your gift now!'); ?></h3>
-                    <?php $form = ActiveForm::begin(); ?>
-                    <div class="row">
-                        <div class="col">
-                            <?= $form->field($model, 'first_name')->textInput(['maxlength' => true]) ?>
+                    if (empty(Yii::$app->session['form_submitted'])) {
+                        ?>
+                        <h3 class="draw-title <?= $titleFont; ?>"><?= Yii::t('yii', 'You have won the'); ?> <strong><u><?= $item->name_en; ?></u></strong> <?= Yii::t('yii', 'from lucky draw, claim your gift now!'); ?></h3>
+                        <?php $form = ActiveForm::begin(); ?>
+                        <div class="row">
+                            <div class="col">
+                                <?= $form->field($model, 'first_name')->textInput(['maxlength' => true]) ?>
 
-                            <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
+                                <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
 
-                            <?= $form->field($model, 'address_line_1')->textInput(['maxlength' => true]) ?>
+                                <?= $form->field($model, 'address_line_1')->textInput(['maxlength' => true]) ?>
 
-                            <?= $form->field($model, 'landmark')->textInput(['maxlength' => true]) ?>
+                                <?= $form->field($model, 'landmark')->textInput(['maxlength' => true]) ?>
 
-                            <?= $form->field($model, 'item_code')->textInput(['maxlength' => true, 'readonly' => 'readonly']) ?>
+                                <?= $form->field($model, 'item_code')->textInput(['maxlength' => true, 'readonly' => 'readonly']) ?>
 
-                            <?= $form->field($model, 'purchase_place')->textInput(['maxlength' => true]) ?>
+                                <?= $form->field($model, 'purchase_place')->textInput(['maxlength' => true]) ?>
+                            </div>
+                            <div class="col">
+                                <?= $form->field($model, 'last_name')->textInput(['maxlength' => true]) ?>
+
+                                <?= $form->field($model, 'phone')->textInput(['maxlength' => true]) ?>
+
+                                <?= $form->field($model, 'address_line_2')->textInput(['maxlength' => true]) ?>
+
+                                <?= $form->field($model, 'city')->textInput(['maxlength' => true]) ?>
+
+                                <?= $form->field($model, 'purchase_date')->textInput(['type' => 'date']) ?>
+
+                                <?= $form->field($model, 'invoice_file')->fileInput() ?>
+                            </div>
                         </div>
-                        <div class="col">
-                            <?= $form->field($model, 'last_name')->textInput(['maxlength' => true]) ?>
 
-                            <?= $form->field($model, 'phone')->textInput(['maxlength' => true]) ?>
-
-                            <?= $form->field($model, 'address_line_2')->textInput(['maxlength' => true]) ?>
-
-                            <?= $form->field($model, 'city')->textInput(['maxlength' => true]) ?>
-
-                            <?= $form->field($model, 'purchase_date')->textInput(['type' => 'date']) ?>
-
-                            <?= $form->field($model, 'invoice_file')->fileInput() ?>
+                        <div class="form-group">
+                            <?= Html::submitButton(Yii::t('yii', 'Submit'), ['class' => 'btn btn-primary btn-lg theme-bg ' . $btnFont]) ?>
                         </div>
-                    </div>
 
-                    <div class="form-group">
-                        <?= Html::submitButton(Yii::t('yii', 'Submit'), ['class' => 'btn btn-primary btn-lg theme-bg '.$btnFont]) ?>
-                    </div>
-
-                    <?php ActiveForm::end(); ?>
-                    <?php
+                        <?php ActiveForm::end(); ?>
+                        <?php
+                    }
                 } else {
                     ?>
                     <div class="col">
-                        <div class="alert alert-danger <?=$btnFont;?>">
+                        <div class="alert alert-danger <?= $btnFont; ?>">
                             <?= Yii::t('yii', 'Verification failed: Invalid item code'); ?>
                         </div>
                     </div>

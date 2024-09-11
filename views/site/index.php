@@ -64,7 +64,7 @@ if (Yii::$app->session['lang'] == 'ar') {
             </div>
             <div class="modal-footer justify-content-between">
                 <button type="button" class="btn btn-default" data-dismiss="modal"><?= Yii::t('yii', 'Close'); ?></button>
-                <button type="submit" class="btn btn-primary theme-bg"><?= Yii::t('yii', 'Save changes'); ?></button>
+                <button type="submit" class="btn btn-primary theme-bg"><?= Yii::t('yii', 'Submit'); ?></button>
             </div>
             <?php ActiveForm::end(); ?>
         </div>
