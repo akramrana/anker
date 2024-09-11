@@ -144,7 +144,7 @@ class SiteController extends Controller
                         $item->updated_at = date('Y-m-d H:i:s');
                         $item->save(false);
                     }
-                    Yii::$app->session->setFlash('success', 'Gift request successfully send');
+                    Yii::$app->session->setFlash('success', Yii::t('yii', 'Gift request successfully send'));
                     return $this->redirect(['gift-claim']);
                 }
             }
@@ -230,10 +230,10 @@ class SiteController extends Controller
                     ->one();
             if (!empty($model)) {
                 Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
-                return ['success' => 1, 'msg' => 'Verification successful, Redirecting...', 'code' => $model->code];
+                return ['success' => 1, 'msg' => Yii::t('yii', 'Verification successful, Redirecting...'), 'code' => $model->code];
             } else {
                 Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
-                return ['success' => 0, 'msg' => 'Verification failed: Invalid login code'];
+                return ['success' => 0, 'msg' => Yii::t('yii', 'Verification failed: Invalid login code')];
             }
         }
     }

@@ -53,8 +53,8 @@ if (Yii::$app->session['lang'] == 'ar') {
             ]);
             ?>
             <div class="modal-header theme-bg">
-                <h4 class="modal-title text-white">Authorization</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <h4 class="modal-title text-white"><?= Yii::t('yii', 'Authorization'); ?></h4>
+                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -63,8 +63,8 @@ if (Yii::$app->session['lang'] == 'ar') {
                 <?= $form->field($model, 'code')->textInput(['maxlength' => true]) ?>
             </div>
             <div class="modal-footer justify-content-between">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary theme-bg">Save changes</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal"><?= Yii::t('yii', 'Close'); ?></button>
+                <button type="submit" class="btn btn-primary theme-bg"><?= Yii::t('yii', 'Save changes'); ?></button>
             </div>
             <?php ActiveForm::end(); ?>
         </div>
@@ -80,7 +80,7 @@ $this->registerJs("$('body').on('beforeSubmit', 'form#login-verify-form', functi
                 return false;
             }
             else{
-            $('#response').html('<div class=\"col-md-12\"><div class=\"alert alert-info\">Sending....</div></div>');
+            $('#response').html('<div class=\"col-md-12\"><div class=\"alert alert-info\">".Yii::t('yii', 'Sending....')."</div></div>');
                    $.ajax({
                         url: form.attr('action'),
                         type: 'post',

@@ -6,8 +6,17 @@ use yii\bootstrap5\Html;
 use app\widgets\Alert;
 
 $this->title = 'Claim your gift';
+
+$dir = "ltr";
+$titleFont = "DINNextLTPro-Bold";
+$btnFont = 'DINNextLTPro-Regular';
+if (Yii::$app->session['lang'] == 'ar') {
+    $dir = "rtl";
+    $titleFont = "GESSTwoBold";
+    $btnFont = "GESSTwoMedium";
+}
 ?>
-<div class="row">
+<div class="row" dir="<?= $dir; ?>">
     <div class="container pt-3">
         <?= Alert::widget() ?>
         <div class="mt-3">
@@ -15,7 +24,7 @@ $this->title = 'Claim your gift';
                 <?php
                 if (!empty($sessionSku)) {
                     ?>
-                <h3 class="draw-title DINNextLTPro-Bold">You have won the <strong><u><?= $item->name_en; ?></u></strong> from lucky draw, claim your gift now!</h3>
+                    <h3 class="draw-title <?= $titleFont; ?>"><?= Yii::t('yii', 'You have won the'); ?> <strong><u><?= $item->name_en; ?></u></strong> <?= Yii::t('yii', 'from lucky draw, claim your gift now!'); ?></h3>
                     <?php $form = ActiveForm::begin(); ?>
                     <div class="row">
                         <div class="col">
@@ -47,7 +56,7 @@ $this->title = 'Claim your gift';
                     </div>
 
                     <div class="form-group">
-                        <?= Html::submitButton('Submit', ['class' => 'btn btn-primary btn-lg theme-bg']) ?>
+                        <?= Html::submitButton(Yii::t('yii', 'Submit'), ['class' => 'btn btn-primary btn-lg theme-bg '.$btnFont]) ?>
                     </div>
 
                     <?php ActiveForm::end(); ?>
@@ -55,8 +64,8 @@ $this->title = 'Claim your gift';
                 } else {
                     ?>
                     <div class="col">
-                        <div class="alert alert-danger">
-                            Verification failed: Invalid item code
+                        <div class="alert alert-danger <?=$btnFont;?>">
+                            <?= Yii::t('yii', 'Verification failed: Invalid item code'); ?>
                         </div>
                     </div>
                     <?php
