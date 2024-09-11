@@ -16,7 +16,7 @@ if (!empty($items)) {
         $d = [
             'label' => $row->name_en,
             'sku' => $row->sku,
-            'backgroundColor' => ($key % 2 == 1) ? '#0096FF' : '#0082FF',
+            'backgroundColor' => ($key % 2 == 1) ? '#00AAFF' : '#00BEFA',
             'labelColor' => ($key % 2 == 1) ? '#fff' : '#fff'
         ];
         array_push($data, $d);
@@ -115,7 +115,7 @@ $js = "
         itemLabelFont: 'Arial',
         itemLabelFontSizeMax: 22,
         lineWidth: 1,
-        lineColor: '#000',
+        lineColor: '#fff',
         overlayImage: img1,
         items: items,
       };
