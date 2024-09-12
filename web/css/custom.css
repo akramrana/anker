@@ -193,14 +193,14 @@ text{
     border-color: #00BEFA;
 }
 .bottom-margin-top{
-    margin-top: 45px;
+/*    margin-top: 45px;*/
 }
 @media (max-width: 345px) {
     .ipower{
         font-size: 22px !important;
     }
     .site-footer{
-        position: fixed;
+/*        position: fixed;*/
         bottom: 0;
     }
 }
@@ -258,8 +258,8 @@ text{
         font-size: 12px;
     }
     .site-footer{
-        position: fixed;
-        bottom: 0;
+/*        position: fixed;
+        bottom: 0;*/
     }
     .header{
         height: 105px;
@@ -341,8 +341,8 @@ text{
         font-size: 18px;
     }
     .site-footer{
-        position: fixed;
-        bottom: 0;
+/*        position: fixed;
+        bottom: 0;*/
     }
 }
 
