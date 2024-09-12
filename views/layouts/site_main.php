@@ -102,22 +102,22 @@ if (Yii::$app->session['lang'] == 'ar') {
                                 </div>
                                 <div class="col-xs-12 col-sm-12 col-md-8 col-lg-7 no-padding-right">
                                     <div class="<?= $textLeft; ?> btn-sec">
-                                        <a href="#" class="btn-custom">
+                                        <a target="_new" href="https://www.carrefouruae.com/mafuae/en/v4/search?keyword=anker%20power%20bank" class="btn-custom">
                                             <img class="bottom-link-img" src="<?php echo BaseUrl::home(); ?>images/Microsite_07.gif" alt="external link" />
                                         </a>
 
-                                        <a href="#" class="btn-custom">
+                                        <a target="_new" href="https://www.eros.ae/accessories/anker.html" class="btn-custom">
                                             <img class="bottom-link-img" src="<?php echo BaseUrl::home(); ?>images/Microsite_09.gif" alt="external link" />
                                         </a>
 
-                                        <a href="#" class="btn-custom">
+                                        <a target="_new" href="https://www.jumbo.ae/search/Anker" class="btn-custom">
                                             <img class="bottom-link-img" src="<?php echo BaseUrl::home(); ?>images/Microsite_11.gif" alt="external link" />
                                         </a>
 
-                                        <a href="#" class="btn-custom">
+                                        <a target="_new" href="https://uae.sharafdg.com/?q=anker&post_type=product" class="btn-custom">
                                             <img class="bottom-link-img" src="<?php echo BaseUrl::home(); ?>images/Microsite_13.gif" alt="external link" />
                                         </a>
-                                        <a href="#" class="btn-custom">
+                                        <a target="_new" href="https://www.virginmegastore.ae/en/search/?q=Anker%3AsearchID%3D63411947%26action%3DFACET_REFING%26page%3D1%26nbResultsPerPage%3D48%26sorting%3DMY_SELECTION%26constraints%3DdisplayedElvisLabel%3AANKER%26query%3DAnker%26version%3D4.1#" class="btn-custom">
                                             <img class="bottom-link-img" src="<?php echo BaseUrl::home(); ?>images/Microsite_15.gif" alt="external link" />
                                         </a>
                                     </div>
