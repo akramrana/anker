@@ -274,6 +274,11 @@ text{
     .no-padding-right{
         padding-right: 0px;
     }
+    .wheel-wrapper{
+        width: 400px;
+        height: 400px;
+        margin: 0 auto;
+    }
 }
 @media (max-width: 540px) {
     .header{

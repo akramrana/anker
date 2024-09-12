@@ -112,8 +112,6 @@ $js = "
         itemLabelAlign: 'left',
         itemLabelColors: ['#000'],
         itemLabelBaselineOffset: -0.06,
-        itemLabelFont: 'Arial',
-        itemLabelFontSizeMax: 22,
         lineWidth: 1,
         lineColor: '#fff',
         overlayImage: img1,
