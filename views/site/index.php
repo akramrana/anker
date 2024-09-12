@@ -79,7 +79,7 @@ if (Yii::$app->session['lang'] == 'ar') {
                 <?= $form->field($model, 'code')->textInput(['maxlength' => true]) ?>
             </div>
             <div class="modal-footer justify-content-between">
-                <button type="button" class="btn btn-default" data-dismiss="modal"><?= Yii::t('yii', 'Close'); ?></button>
+<!--                <button type="button" class="btn btn-default" data-dismiss="modal"><?= Yii::t('yii', 'Close'); ?></button>-->
                 <button type="submit" class="btn btn-primary theme-bg"><?= Yii::t('yii', 'Submit'); ?></button>
             </div>
             <?php ActiveForm::end(); ?>

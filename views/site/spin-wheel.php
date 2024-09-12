@@ -16,8 +16,8 @@ if (!empty($items)) {
         $d = [
             'label' => $row->name_en,
             'sku' => $row->sku,
-            'backgroundColor' => ($key % 2 == 1) ? '#00AAFF' : '#00BEFA',
-            'labelColor' => ($key % 2 == 1) ? '#fff' : '#fff',
+            'backgroundColor' => ($key % 2 == 1) ? '#F6F6F6' : '#F6F6F6',
+            'labelColor' => ($key % 2 == 1) ? '#00BEFA' : '#00BEFA',
         ];
         array_push($data, $d);
     }
@@ -84,7 +84,7 @@ if (Yii::$app->session['lang'] == 'ar') {
 
                 </div>
                 <div class="modal-footer justify-content-between">
-                    <button type="button" class="btn btn-default" data-dismiss="modal"><?= Yii::t('yii', 'Close'); ?></button>
+<!--                    <button type="button" class="btn btn-default" data-dismiss="modal"><?= Yii::t('yii', 'Close'); ?></button>-->
                     <button onclick="site.claimGift('<?= $model->code; ?>')"  type="button" class="btn btn-primary theme-bg <?= $btnFont; ?>"><?= Yii::t('yii', 'Claim your gift'); ?></button>
                 </div>
                 <?php
@@ -113,7 +113,7 @@ $js = "
         itemLabelColors: ['#000'],
         itemLabelBaselineOffset: -0.06,
         lineWidth: 1,
-        lineColor: '#fff',
+        lineColor: '#00BEFA',
         overlayImage: img1,
         items: items,
         itemLabelFont:'DINNextLTPro-Regular',
@@ -125,7 +125,7 @@ $js = "
       //
       wheel.onRest = e => {
         var data = items[e.currentIndex]
-        console.log(data);
+        //console.log(data);
         if(data.sku){
             $('#won-section').removeClass('d-none');
             $('#itemName').html(data.label);
