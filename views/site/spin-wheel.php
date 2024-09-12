@@ -5,13 +5,13 @@ use yii\helpers\BaseUrl;
 $this->title = 'Lucky Draw';
 $data = [];
 if (!empty($items)) {
-    /*$d = [
-        'label' => 'No Luck',
-        'sku' => '',
-        'backgroundColor' => 'dimgray',
-        'labelColor' => 'silver'
-    ];
-    array_push($data, $d);*/
+    /* $d = [
+      'label' => 'No Luck',
+      'sku' => '',
+      'backgroundColor' => 'dimgray',
+      'labelColor' => 'silver'
+      ];
+      array_push($data, $d); */
     foreach ($items as $key => $row) {
         $d = [
             'label' => $row->name_en,
@@ -84,8 +84,10 @@ if (Yii::$app->session['lang'] == 'ar') {
 
                 </div>
                 <div class="modal-footer justify-content-between">
-<!--                    <button type="button" class="btn btn-default" data-dismiss="modal"><?= Yii::t('yii', 'Close'); ?></button>-->
-                    <button onclick="site.claimGift('<?= $model->code; ?>')"  type="button" class="btn btn-primary theme-bg <?= $btnFont; ?>"><?= Yii::t('yii', 'Claim your gift'); ?></button>
+                    <div class="float-right text-right w-100">
+    <!--                    <button type="button" class="btn btn-default" data-dismiss="modal"><?= Yii::t('yii', 'Close'); ?></button>-->
+                        <button onclick="site.claimGift('<?= $model->code; ?>')"  type="button" class="btn btn-primary theme-bg <?= $btnFont; ?>"><?= Yii::t('yii', 'Claim your gift'); ?></button>
+                    </div>
                 </div>
                 <?php
             }

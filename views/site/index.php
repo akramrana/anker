@@ -37,7 +37,7 @@ if (Yii::$app->session['lang'] == 'ar') {
     <div class="col-lg-8 col-md-8 col-sm-7 col-12">
         <img class="img-fluid float-right" src="<?php echo BaseUrl::home(); ?>images/<?php echo $phoneImg; ?>.png" alt="Microsite_07" />
     </div>
-    
+
     <div class="col-lg-4 col-md-4 col-sm-5 col-12 pt-xs-5 d-inline d-sm-none bottom-margin-top">
         <h1 class="<?= $titleFont; ?> ipower" style="text-align: center">
             <div><?= Yii::t('yii', 'iPower'); ?></div>
@@ -79,8 +79,10 @@ if (Yii::$app->session['lang'] == 'ar') {
                 <?= $form->field($model, 'code')->textInput(['maxlength' => true]) ?>
             </div>
             <div class="modal-footer justify-content-between">
-<!--                <button type="button" class="btn btn-default" data-dismiss="modal"><?= Yii::t('yii', 'Close'); ?></button>-->
-                <button type="submit" class="btn btn-primary theme-bg"><?= Yii::t('yii', 'Submit'); ?></button>
+                <div class="float-right text-right w-100">
+<!--                    <button type="button" class="btn btn-default" data-dismiss="modal"><?= Yii::t('yii', 'Close'); ?></button>-->
+                    <button type="submit" class="btn btn-primary theme-bg"><?= Yii::t('yii', 'Submit'); ?></button>
+                </div>
             </div>
             <?php ActiveForm::end(); ?>
         </div>
@@ -96,7 +98,7 @@ $this->registerJs("$('body').on('beforeSubmit', 'form#login-verify-form', functi
                 return false;
             }
             else{
-            $('#response').html('<div class=\"col-md-12\"><div class=\"alert alert-info\">".Yii::t('yii', 'Sending....')."</div></div>');
+            $('#response').html('<div class=\"col-md-12\"><div class=\"alert alert-info\">" . Yii::t('yii', 'Sending....') . "</div></div>');
                    $.ajax({
                         url: form.attr('action'),
                         type: 'post',
