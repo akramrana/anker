@@ -24,7 +24,7 @@ return [
     'Collection' => 'طاقة آيباور',
     'Experience the Ultimate in' => 'استمتع بتجرُبة شحن مثاليّة، سريعة،',
     'Fast, Safe, and Portable Charging' => 'آمنة، تصطحِبها معك لكلّ مكان',
-    'Participate in Lucky Draw' => 'جرّب حظّك في السَحب الآن',
+    'Participate in the Lucky Draw' => 'جرّب حظّك في السَحب الآن',
     'Authorization' => 'إذن',
     'Save changes' => 'يُقدِّم',
     'Submit' => 'يُقدِّم',

@@ -93,16 +93,16 @@ if (Yii::$app->session['lang'] == 'ar') {
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-8 col-lg-9">
                             <div class="row bottom-link ml-lg-5">
-                                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-5">
+                                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-6">
                                     <div class="author-txt">
                                         <span class="<?=$authorFont;?> author">
                                             <?= Yii::t('yii', 'Authorised Sellers:'); ?>
                                         </span>
                                     </div>
                                 </div>
-                                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-7 no-padding-right">
+                                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-6 no-padding-right">
                                     <div class="<?= $textLeft; ?> btn-sec">
-                                        <a target="_new" href="https://www.carrefouruae.com/mafuae/en/v4/search?keyword=anker%20power%20bank" class="btn-custom">
+<!--                                        <a target="_new" href="https://www.carrefouruae.com/mafuae/en/v4/search?keyword=anker%20power%20bank" class="btn-custom">
                                             <img class="bottom-link-img" src="<?php echo BaseUrl::home(); ?>images/Microsite_07.gif" alt="external link" />
                                         </a>
 
@@ -112,7 +112,7 @@ if (Yii::$app->session['lang'] == 'ar') {
 
                                         <a target="_new" href="https://www.jumbo.ae/search/Anker" class="btn-custom">
                                             <img class="bottom-link-img" src="<?php echo BaseUrl::home(); ?>images/Microsite_11.gif" alt="external link" />
-                                        </a>
+                                        </a>-->
 
                                         <a target="_new" href="https://uae.sharafdg.com/?q=anker&post_type=product" class="btn-custom">
                                             <img class="bottom-link-img" src="<?php echo BaseUrl::home(); ?>images/Microsite_13.gif" alt="external link" />

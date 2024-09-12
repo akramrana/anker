@@ -37,6 +37,7 @@ body{
 .lang-sec{
     margin-left: 0px;
 }
+
 @media (max-width: 480px) {
     .rtl-top-padding{
         padding-right: 25px;
@@ -65,10 +66,16 @@ body{
     .experience_ar{
         font-size: 12px !important;
     }
+    .ipower_bottom{
+        font-size: 25px !important;
+    }
+    
 }
 @media (max-width: 540px) {
     .experience_ar{
-        font-size: 10px !important;
+        font-size: 16px !important;
+        text-align: left !important;
+        margin-top: 25px !important;
     }
 }
 @media (max-width: 767px) {
@@ -86,6 +93,12 @@ body{
     .author-txt{
         text-align: center !important;
         margin-right: 0px;
+    }
+    .ipower_bottom{
+        margin-top: 25px !important;
+    }
+    .lucky-blue-btm{
+        font-size: 20px !important;
     }
 }
 @media (min-width: 768px) and (max-width: 979px) {

@@ -174,7 +174,7 @@ text{
 .draw-title{
     color: #00BEFA;
     margin-bottom: 25px;
-    font-size: 50px;
+    font-size: 40px;
     text-align: center;
 }
 .claim-gift{
@@ -284,6 +284,12 @@ text{
         height: 360px;
         margin: 0 auto;
     }
+    .ipower_bottom{
+        font-size: 25px !important;
+    }
+    .experience_ar {
+        font-size: 13px !important;
+    }
 }
 @media (max-width: 540px) {
     .header{
@@ -294,7 +300,8 @@ text{
         min-height: 105px !important;
     }
     .btn-sec{
-        margin-left: 23px;
+        margin-left: 0px;
+        text-align: center !important;
     }
     .bottom-link-img{
         height: 25px !important;
@@ -303,6 +310,12 @@ text{
         height: 105px;
         width: 250px;
         margin-left: -45px !important;
+    }
+    .experience_ar {
+        font-size: 16px;
+        text-align: right !important;
+        margin-top: 25px !important;
+        margin-right: 10px;
     }
 }
 @media (max-width: 767px) {
@@ -353,6 +366,9 @@ text{
     .site-footer{
 /*        position: fixed;
         bottom: 0;*/
+    }
+    .lucky-blue-btm{
+        font-size: 20px !important;
     }
 }
 

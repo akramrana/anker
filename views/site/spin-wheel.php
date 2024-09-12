@@ -37,13 +37,13 @@ if (Yii::$app->session['lang'] == 'ar') {
     <div class="container">
         <div class="mt-3">
             <div class="lucky-draw-box">
-                <h2 class="draw-title <?= $titleFont; ?>"><?= Yii::t('yii', 'Participate in Lucky Draw'); ?></h2>
+                <h2 class="draw-title <?= $titleFont; ?>"><?= Yii::t('yii', 'Participate in the Lucky Draw'); ?></h2>
                 <?php
                 if (!empty($model)) {
                     ?>
                     <div class="gui-wrapper">
                         <div class="wheel-wrapper"></div>
-                        <button class="btn btn-primary btn-lg mb-3 theme-bg <?= $btnFont; ?>"><?= Yii::t('yii', 'Try My Luck'); ?></button>
+                        <button class="btn btn-primary btn-lg mt-4 mb-3 theme-bg <?= $btnFont; ?>"><?= Yii::t('yii', 'Try My Luck'); ?></button>
                     </div>
                     <?php
                 } else {
