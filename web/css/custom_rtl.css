@@ -44,35 +44,48 @@ body{
     .ipower{
         font-size: 15px !important;
         margin-right: 20px;
-        margin-top: 20px !important;
+        margin-top: 10px !important;
     }
     .experience{
-        font-size: 8px !important;
-        margin-right: 20px;
+        font-size: 10px !important;
+        margin-right: 10px;
     }
     .lucky-blue{
-        margin-right: 20px;
+        margin-right: 10px;
     }
     .author-txt{
         text-align: right !important;
         margin-right: 5px;
+    }
+    .image-angle-ar{
+        height: 105px;
+        width: 250px;
+        margin-left: -45px;
+    }
+    .experience_ar{
+        font-size: 12px !important;
+    }
+}
+@media (max-width: 540px) {
+    .experience_ar{
+        font-size: 10px !important;
     }
 }
 @media (max-width: 767px) {
     .ipower{
-        margin-right: 20px;
+        margin-right: 10px;
         margin-top: 20px !important;
     }
     .experience{
         font-size: 1vw;
-        margin-right: 20px;
+        margin-right: 10px;
     }
     .lucky-blue{
-        margin-right: 20px;
+        margin-right: 10px;
     }
     .author-txt{
-        text-align: right !important;
-        margin-right: 5px;
+        text-align: center !important;
+        margin-right: 0px;
     }
 }
 @media (min-width: 768px) and (max-width: 979px) {

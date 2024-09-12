@@ -40,7 +40,7 @@ if (Yii::$app->session['lang'] == 'ar') {
         <?php
         if (Yii::$app->session['lang'] == 'ar') {
             ?>
-            <link rel="stylesheet" href="<?php echo BaseUrl::home() ?>css/custom_rtl.css"/>
+            <link rel="stylesheet" href="<?php echo BaseUrl::home() ?>css/custom_rtl.css?<?php echo microtime() ?>"/>
             <?php
         }
         ?>

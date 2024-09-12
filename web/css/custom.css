@@ -209,25 +209,25 @@ text{
 @media (max-width: 480px) {
     .logo{
         width: 100px;
-        margin-top:15px;
-        margin-left: 5px;
+        margin-top:20px !important;
+        margin-left:5px;
     }
     .ipower{
         line-height: normal;
         margin-top: 20px;
-        margin-left: 20px;
+        margin-left: 10px;
         font-size: 24px !important;
     }
     .experience{
         line-height: normal;
-        margin-top: 10px;
-        margin-left: 20px;
-        font-size: 15px !important;
+        margin-top: 0px !important;
+        margin-left: 10px;
+        font-size: 11px !important;
     }
     .lucky-blue{
-        margin-top: 20px;
-        margin-left: 20px;
-        font-size: 10px;
+        margin-top: 0px !important;
+        margin-left: 10px;
+        font-size: 9px !important;
     }
     .btn-custom{
         margin-bottom: 10px;
@@ -275,6 +275,7 @@ text{
 @media (max-width: 540px) {
     .header{
         height: 105px;
+        overflow: hidden;
     }
     .footer{
         min-height: 105px !important;
@@ -284,6 +285,11 @@ text{
     }
     .bottom-link-img{
         height: 25px !important;
+    }
+    .image-angle-ar{
+        height: 105px;
+        width: 250px;
+        margin-left: -45px !important;
     }
 }
 @media (max-width: 767px) {
@@ -295,18 +301,18 @@ text{
     .ipower{
         line-height: normal;
         margin-top: 20px;
-        margin-left: 20px;
+        margin-left: 10px;
         font-size: 35px;
     }
     .experience{
         line-height: normal;
         margin-top: 10px;
-        margin-left: 20px;
+        margin-left: 10px;
         font-size: 12px;
     }
     .lucky-blue{
         margin-top: 20px;
-        margin-left: 20px;
+        margin-left: 10px;
         font-size: 10px;
     }
     .btn-custom{
