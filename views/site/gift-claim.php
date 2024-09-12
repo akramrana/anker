@@ -33,26 +33,16 @@ if (Yii::$app->session['lang'] == 'ar') {
 
                                 <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
 
-                                <?= $form->field($model, 'address_line_1')->textInput(['maxlength' => true]) ?>
-
-                                <?= $form->field($model, 'landmark')->textInput(['maxlength' => true]) ?>
-
-                                <?= $form->field($model, 'item_code')->textInput(['maxlength' => true, 'readonly' => 'readonly']) ?>
-
                                 <?= $form->field($model, 'purchase_place')->textInput(['maxlength' => true]) ?>
+                                
+                                <?= $form->field($model, 'purchase_date')->textInput(['type' => 'date']) ?>
                             </div>
                             <div class="col">
                                 <?= $form->field($model, 'last_name')->textInput(['maxlength' => true]) ?>
 
                                 <?= $form->field($model, 'phone')->textInput(['maxlength' => true]) ?>
 
-                                <?= $form->field($model, 'address_line_2')->textInput(['maxlength' => true]) ?>
-
                                 <?= $form->field($model, 'city')->textInput(['maxlength' => true]) ?>
-
-                                <?= $form->field($model, 'purchase_date')->textInput(['type' => 'date']) ?>
-
-                                <?= $form->field($model, 'invoice_file')->fileInput() ?>
                             </div>
                         </div>
 
