@@ -19,7 +19,7 @@ if (Yii::$app->session['lang'] == 'ar') {
 }
 ?>
 <div class="row">
-    <div class="col-lg-4 col-md-4 col-sm-5 col-5 pt-xs-5">
+    <div class="col-lg-4 col-md-4 col-sm-5 col-12 pt-xs-5 d-none d-sm-inline">
         <h1 class="<?= $titleFont; ?> ipower">
             <div><?= Yii::t('yii', 'iPower'); ?></div>
             <div><?= Yii::t('yii', 'Collection'); ?></div>
@@ -34,8 +34,24 @@ if (Yii::$app->session['lang'] == 'ar') {
             </a>
         </p>
     </div>
-    <div class="col-lg-8 col-md-8 col-sm-7 col-7">
+    <div class="col-lg-8 col-md-8 col-sm-7 col-12">
         <img class="img-fluid float-right" src="<?php echo BaseUrl::home(); ?>images/<?php echo $phoneImg; ?>.png" alt="Microsite_07" />
+    </div>
+    
+    <div class="col-lg-4 col-md-4 col-sm-5 col-12 pt-xs-5 d-inline d-sm-none bottom-margin-top">
+        <h1 class="<?= $titleFont; ?> ipower" style="text-align: center">
+            <div><?= Yii::t('yii', 'iPower'); ?></div>
+            <div><?= Yii::t('yii', 'Collection'); ?></div>
+        </h1>
+        <p class="<?= $experienceFont; ?> experience experience_ar" style="text-align: center">
+            <span><?= Yii::t('yii', 'Experience the Ultimate in'); ?></span><br/>
+            <span><?= Yii::t('yii', 'Fast, Safe, and Portable Charging'); ?></span>
+        </p>
+        <p style="text-align: center !important">
+            <a data-toggle="modal" data-target="#modal-default" href="javascript:;" class="btn btn-primary btn-lg <?php echo $luckyBlueFont; ?> lucky-blue">
+                <?= Yii::t('yii', 'Participate in Lucky Draw'); ?>
+            </a>
+        </p>
     </div>
 </div>
 
