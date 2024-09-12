@@ -209,13 +209,6 @@ text{
         margin: 0 auto;
     }
 }
-@media (max-width: 360px) {
-    .wheel-wrapper{
-        width: 350px !important;
-        height: 350px !important;
-        margin: 0 auto;
-    }
-}
 @media (max-width: 430px) {
     .btn-sec{
         margin-left: 5px !important;
@@ -287,8 +280,8 @@ text{
         padding-right: 0px;
     }
     .wheel-wrapper{
-        width: 400px;
-        height: 400px;
+        width: 360px;
+        height: 360px;
         margin: 0 auto;
     }
 }
@@ -310,11 +303,6 @@ text{
         height: 105px;
         width: 250px;
         margin-left: -45px !important;
-    }
-    .wheel-wrapper{
-        width: 500px !important;
-        height: 500px !important;
-        margin: 0 auto;
     }
 }
 @media (max-width: 767px) {
