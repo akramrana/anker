@@ -143,7 +143,7 @@ body{
 }
 .author-txt{
     text-align: right !important;
-    margin-right: -50px;
+/*    margin-right: -50px;*/
 }
 .lang-sec{
     margin-left: 80px;
