@@ -37,13 +37,13 @@ if (Yii::$app->session['lang'] == 'ar') {
     <div class="container">
         <div class="mt-3">
             <div class="lucky-draw-box">
-                <h2 class="draw-title <?= $titleFont; ?>"><?= Yii::t('yii', 'Participate in the Lucky Draw'); ?></h2>
+                <h2 class="draw-title <?= $titleFont; ?>"><?= Yii::t('yii', 'Particiapte in the Lucky Draw'); ?></h2>
                 <?php
                 if (!empty($model)) {
                     ?>
                     <div class="gui-wrapper">
                         <div class="wheel-wrapper"></div>
-                        <button class="btn btn-primary btn-lg mt-4 mb-3 theme-bg <?= $btnFont; ?>"><?= Yii::t('yii', 'Try My Luck'); ?></button>
+                        <button class="btn btn-primary btn-lg mt-4 mb-3 theme-bg <?= $btnFont; ?>"><?= Yii::t('yii', 'Spin the Wheel'); ?></button>
                     </div>
                     <?php
                 } else {
@@ -77,7 +77,7 @@ if (Yii::$app->session['lang'] == 'ar') {
 
                     <div class="col d-none mb-3 text-center pt-3" id="won-section">
                         <div class="alert alert-default <?= $btnFont; ?>">
-                            <?= Yii::t('yii', 'Hurry: you have won the'); ?> <strong><span id="itemName"></span></strong>
+                            <?= Yii::t('yii', 'Congratulations! You have won a'); ?> <strong><span id="itemName"></span></strong>
                             <input type="hidden" id="item_sku" name="item_sku" value=""/>
                         </div>
                     </div>

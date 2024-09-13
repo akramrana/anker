@@ -145,7 +145,7 @@ class SiteController extends Controller
                         $item->updated_at = date('Y-m-d H:i:s');
                         $item->save(false);
                     }
-                    Yii::$app->session->setFlash('success', Yii::t('yii', 'Gift request successfully sent!'));
+                    Yii::$app->session->setFlash('success', Yii::t('yii', 'Thank You for submitting, you will receive an email from us shortly!'));
                     Yii::$app->session->set('form_submitted', 1);
                     return $this->redirect(['gift-claim']);
                 }

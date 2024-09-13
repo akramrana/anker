@@ -30,7 +30,7 @@ if (Yii::$app->session['lang'] == 'ar') {
         </p>
         <p class="<?= $luckyBlueFloat; ?>">
             <a data-toggle="modal" data-target="#modal-default" href="javascript:;" class="btn btn-primary btn-lg <?php echo $luckyBlueFont; ?> lucky-blue">
-                <?= Yii::t('yii', 'Participate in Lucky Draw'); ?>
+                <?= Yii::t('yii', 'Particiapte in the Lucky Draw'); ?>
             </a>
         </p>
     </div>
@@ -57,7 +57,7 @@ if (Yii::$app->session['lang'] == 'ar') {
             <div class="col-lg-4 col-md-4 col-sm-5 col-12 pt-xs-5 bottom-margin-top text-center">
                 <p>
                     <a data-toggle="modal" data-target="#modal-default" href="javascript:;" class="btn btn-primary btn-lg <?php echo $luckyBlueFont; ?> lucky-blue lucky-blue-btm">
-                        <?= Yii::t('yii', 'Participate in Lucky Draw'); ?>
+                        <?= Yii::t('yii', 'Particiapte in the Lucky Draw'); ?>
                     </a>
                 </p>
             </div>
@@ -79,14 +79,14 @@ if (Yii::$app->session['lang'] == 'ar') {
             ]);
             ?>
             <div class="modal-header theme-bg">
-                <h4 class="modal-title text-white"><?= Yii::t('yii', 'Authorization'); ?></h4>
+                <h4 class="modal-title text-white"><?= Yii::t('yii', 'Activation Code'); ?></h4>
                 <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
                 <div id="response"></div>
-                <?= $form->field($model, 'code')->textInput(['maxlength' => true]) ?>
+                <?= $form->field($model, 'code')->textInput(['maxlength' => true])->label( Yii::t('yii', 'Please enter the 4-digit login code found inside your box to continue')) ?>
             </div>
             <div class="modal-footer justify-content-between">
                 <div class="float-right text-right w-100">
