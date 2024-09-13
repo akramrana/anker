@@ -297,8 +297,8 @@ text{
         font-size: 18px !important;
     }
     .tc{
-        margin-top: 0px;
-        padding-bottom: 10px;
+        margin: 0;
+        padding: 0;
     }
 }
 @media (max-width: 540px) {
