@@ -37,14 +37,14 @@ $this->params['breadcrumbs'][] = $this->title;
                             'last_name',
                             'email:email',
                             'phone',
-                            'address_line_1',
-                            'address_line_2',
-                            'landmark',
+                            //'address_line_1',
+                            //'address_line_2',
+                            //'landmark',
                             'city',
                             'item_code',
                             'purchase_date',
                             'purchase_place',
-                            [
+                            /*[
                                 'attribute' => 'invoice_file',
                                 'value' => call_user_func(function ($model) {
                                     return \yii\bootstrap5\Html::a($model->invoice_file, yii\helpers\BaseUrl::home() . 'uploads/' . $model->invoice_file, [
@@ -52,7 +52,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                     ]);
                                 }, $model),
                                 'format' => ['raw'],
-                            ],
+                            ],*/
                             [
                                 'attribute' => 'is_contacted',
                                 'value' => ($model->is_contacted == 1) ? "Yes" : "No"

@@ -48,8 +48,7 @@ if (Yii::$app->session['lang'] == 'ar') {
             </div>
             <div class="col">
                 <p class="<?= $experienceFont; ?> experience experience_ar text-right mt-5">
-                    <span><?= Yii::t('yii', 'Experience the Ultimate in'); ?></span><br/>
-                    <span><?= Yii::t('yii', 'Fast, Safe, and Portable Charging'); ?></span>
+                    <span><?= Yii::t('yii', 'Experience the Ultimate in'); ?> <?= Yii::t('yii', 'Fast, Safe, and Portable Charging'); ?></span>
                 </p>
             </div>
         </div>

@@ -66,16 +66,7 @@ if (Yii::$app->session['lang'] == 'ar') {
                                     'Abu Dhabi' => 'Abu Dhabi',
                                         ], ['prompt' => 'Select a City'])
                                 ?>
-                                <div class="text-danger">
-                                    <?= $form->field($model, 'item_code')->textInput(['maxlength' => true, 'readonly' => 'readonly', 'class' => 'form-control text-danger']) ?>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                <div class="text-danger">
-                                    <?= $form->field($model, 'invoice_file')->fileInput(['class' => 'form-control text-danger']) ?>
-                                </div>
+                                
                             </div>
                         </div>
 

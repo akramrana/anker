@@ -14,7 +14,7 @@ if (!empty($items)) {
       array_push($data, $d); */
     foreach ($items as $key => $row) {
         $d = [
-            'label' => $row->name_en,
+            'label' => (Yii::$app->session['lang'] == 'ar') ? $row->name_ar : $row->name_en,
             'sku' => $row->sku,
             'backgroundColor' => ($key % 2 == 1) ? '#F6F6F6' : '#F6F6F6',
             'labelColor' => ($key % 2 == 1) ? '#00BEFA' : '#00BEFA',
@@ -27,17 +27,19 @@ $jsonData = json_encode($data);
 $dir = "ltr";
 $titleFont = "DINNextLTPro-Bold";
 $btnFont = 'DINNextLTPro-Regular';
+$wheelLabelFont = "DINNextLTPro-Bold";
 if (Yii::$app->session['lang'] == 'ar') {
     $dir = "rtl";
     $titleFont = "GESSTwoBold";
     $btnFont = "GESSTwoMedium";
+    $wheelLabelFont = "GESSTwoMedium";
 }
 ?>
 <div class="row" dir="<?= $dir; ?>">
     <div class="container">
         <div class="mt-3">
             <div class="lucky-draw-box">
-                <h2 class="draw-title <?= $titleFont; ?>"><?= Yii::t('yii', 'Particiapte in the Lucky Draw'); ?></h2>
+                <h2 class="draw-title <?= $titleFont; ?>"><?= Yii::t('yii', 'Participate in the Lucky Draw'); ?></h2>
                 <?php
                 if (!empty($model)) {
                     ?>
@@ -118,7 +120,7 @@ $js = "
         lineColor: '#00BEFA',
         overlayImage: img1,
         items: items,
-        itemLabelFont:'DINNextLTPro-Bold',
+        itemLabelFont:'$wheelLabelFont',
         itemLabelFontSizeMax:18,
       };
       const container = document.querySelector('.wheel-wrapper');
