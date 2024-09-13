@@ -30,7 +30,7 @@ if (Yii::$app->session['lang'] == 'ar') {
         </p>
         <p class="<?= $luckyBlueFloat; ?>">
             <a data-toggle="modal" data-target="#modal-default" href="javascript:;" class="btn btn-primary btn-lg <?php echo $luckyBlueFont; ?> lucky-blue">
-                <?= Yii::t('yii', 'Particiapte in the Lucky Draw'); ?>
+                <?= Yii::t('yii', 'Participate in the Lucky Draw'); ?>
             </a>
         </p>
     </div>
@@ -57,7 +57,7 @@ if (Yii::$app->session['lang'] == 'ar') {
             <div class="col-lg-4 col-md-4 col-sm-5 col-12 pt-xs-5 bottom-margin-top text-center">
                 <p>
                     <a data-toggle="modal" data-target="#modal-default" href="javascript:;" class="btn btn-primary btn-lg <?php echo $luckyBlueFont; ?> lucky-blue lucky-blue-btm">
-                        <?= Yii::t('yii', 'Particiapte in the Lucky Draw'); ?>
+                        <?= Yii::t('yii', 'Participate in the Lucky Draw'); ?>
                     </a>
                 </p>
             </div>

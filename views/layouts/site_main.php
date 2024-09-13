@@ -95,24 +95,24 @@ if (Yii::$app->session['lang'] == 'ar') {
                             <div class="row bottom-link ml-lg-5">
                                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-6">
                                     <div class="author-txt">
-                                        <span class="<?=$authorFont;?> author">
-                                            <?= Yii::t('yii', 'Authorised Sellers:'); ?>
+                                        <span class="<?= $authorFont; ?> author">
+                                            <?= Yii::t('yii', 'Exclusively Available in:'); ?>
                                         </span>
                                     </div>
                                 </div>
                                 <div class="col-xs-12 col-sm-12 col-md-8 col-lg-6 no-padding-right">
                                     <div class="<?= $textLeft; ?> btn-sec">
-<!--                                        <a target="_new" href="https://www.carrefouruae.com/mafuae/en/v4/search?keyword=anker%20power%20bank" class="btn-custom">
-                                            <img class="bottom-link-img" src="<?php echo BaseUrl::home(); ?>images/Microsite_07.gif" alt="external link" />
-                                        </a>
-
-                                        <a target="_new" href="https://www.eros.ae/accessories/anker.html" class="btn-custom">
-                                            <img class="bottom-link-img" src="<?php echo BaseUrl::home(); ?>images/Microsite_09.gif" alt="external link" />
-                                        </a>
-
-                                        <a target="_new" href="https://www.jumbo.ae/search/Anker" class="btn-custom">
-                                            <img class="bottom-link-img" src="<?php echo BaseUrl::home(); ?>images/Microsite_11.gif" alt="external link" />
-                                        </a>-->
+                                        <!--                                        <a target="_new" href="https://www.carrefouruae.com/mafuae/en/v4/search?keyword=anker%20power%20bank" class="btn-custom">
+                                                                                    <img class="bottom-link-img" src="<?php echo BaseUrl::home(); ?>images/Microsite_07.gif" alt="external link" />
+                                                                                </a>
+                                        
+                                                                                <a target="_new" href="https://www.eros.ae/accessories/anker.html" class="btn-custom">
+                                                                                    <img class="bottom-link-img" src="<?php echo BaseUrl::home(); ?>images/Microsite_09.gif" alt="external link" />
+                                                                                </a>
+                                        
+                                                                                <a target="_new" href="https://www.jumbo.ae/search/Anker" class="btn-custom">
+                                                                                    <img class="bottom-link-img" src="<?php echo BaseUrl::home(); ?>images/Microsite_11.gif" alt="external link" />
+                                                                                </a>-->
 
                                         <a target="_new" href="https://uae.sharafdg.com/?q=anker&post_type=product" class="btn-custom">
                                             <img class="bottom-link-img" src="<?php echo BaseUrl::home(); ?>images/Anker _Innovations_Square-01.png" alt="external link" />
@@ -120,6 +120,7 @@ if (Yii::$app->session['lang'] == 'ar') {
                                         <a target="_new" href="https://www.virginmegastore.ae/en/search/?q=Anker%3AsearchID%3D63411947%26action%3DFACET_REFING%26page%3D1%26nbResultsPerPage%3D48%26sorting%3DMY_SELECTION%26constraints%3DdisplayedElvisLabel%3AANKER%26query%3DAnker%26version%3D4.1#" class="btn-custom">
                                             <img class="bottom-link-img" src="<?php echo BaseUrl::home(); ?>images/Microsite_15.gif" alt="external link" />
                                         </a>
+                                        <a class="text-white <?= $authorFont; ?> terms d-none d-sm-inline" href="<?php echo BaseUrl::home() ?>site/terms-conditions"><?= Yii::t('yii', 'Terms & Conditions'); ?></a>
                                     </div>
                                 </div>
                             </div>
@@ -127,6 +128,11 @@ if (Yii::$app->session['lang'] == 'ar') {
                         <div class="col-2 col-md-4 col-lg-3 d-none d-md-block">
                             <div class="image-angle-<?php echo $imageAngle; ?>-bottom float-<?= $float; ?>">
                             </div>
+                        </div>
+                    </div>
+                    <div class="row tc d-inline d-sm-none">
+                        <div class="col text-center">
+                            <a class="text-white <?= $authorFont; ?>" href="<?php echo BaseUrl::home() ?>site/terms-conditions"><?= Yii::t('yii', 'Terms & Conditions'); ?></a>
                         </div>
                     </div>
                 </div>
