@@ -159,7 +159,7 @@ body{
     background: url(../images/group-124719.png);
 }
 .btn-sec{
-    margin-left: 70px;
+    margin-left: 0px;
 }
 text{
     font-size: 15px;
@@ -193,14 +193,20 @@ text{
     border-color: #00BEFA;
 }
 .bottom-margin-top{
-/*    margin-top: 45px;*/
+    /*    margin-top: 45px;*/
+}
+.tc{
+    margin-top: -35px;
+}
+.terms{
+    margin-left: 25px;
 }
 @media (max-width: 345px) {
     .ipower{
         font-size: 22px !important;
     }
     .site-footer{
-/*        position: fixed;*/
+        /*        position: fixed;*/
         bottom: 0;
     }
     .wheel-wrapper{
@@ -263,8 +269,8 @@ text{
         font-size: 12px;
     }
     .site-footer{
-/*        position: fixed;
-        bottom: 0;*/
+        /*        position: fixed;
+                bottom: 0;*/
     }
     .header{
         height: 105px;
@@ -289,6 +295,10 @@ text{
     }
     .experience_ar {
         font-size: 18px !important;
+    }
+    .tc{
+        margin-top: 0px;
+        padding-bottom: 10px;
     }
 }
 @media (max-width: 540px) {
@@ -364,8 +374,8 @@ text{
         font-size: 18px;
     }
     .site-footer{
-/*        position: fixed;
-        bottom: 0;*/
+        /*        position: fixed;
+                bottom: 0;*/
     }
     .lucky-blue-btm{
         font-size: 20px !important;

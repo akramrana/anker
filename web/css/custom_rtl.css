@@ -37,7 +37,9 @@ body{
 .lang-sec{
     margin-left: 0px;
 }
-
+.terms{
+    margin-right: 25px;
+}
 @media (max-width: 480px) {
     .rtl-top-padding{
         padding-right: 25px;
