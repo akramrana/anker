@@ -118,8 +118,8 @@ $js = "
         lineColor: '#00BEFA',
         overlayImage: img1,
         items: items,
-        itemLabelFont:'DINNextLTPro-Regular',
-        itemLabelFontSizeMax:17,
+        itemLabelFont:'DINNextLTPro-Bold',
+        itemLabelFontSizeMax:18,
       };
       const container = document.querySelector('.wheel-wrapper');
       window.wheel = new spinWheel.Wheel(container, props);
