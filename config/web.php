@@ -17,7 +17,7 @@ $config = [
     ],
     'components' => [
         'request' => [
-            // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
+// !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'Mlg2FKsW2LcYssTueqoktpk6zi3fxs9f',
             'baseUrl' => $baseUrl,
         ],
@@ -66,12 +66,25 @@ $config = [
             'cookieParams' => ['lifetime' => 7 * 24 * 60 * 60]
         ],
     ],
+    'container' => [
+        'definitions' => [
+            'yii\widgets\LinkPager' => [
+                'options' => ['class' => 'pagination'],
+                'linkOptions' => ['class' => 'page-link'],
+                'maxButtonCount' => 8,
+                'pageCssClass' => 'paginate_button page-item',
+                'disabledPageCssClass' => 'paginate_button page-item disabled',
+                'firstPageLabel' => 'First',
+                'lastPageLabel' => 'Last',
+            ]
+        ]
+    ],
     'params' => $params,
         //'defaultRoute' => 'dashboard/index',
 ];
 
 if (YII_ENV_DEV) {
-    // configuration adjustments for 'dev' environment
+// configuration adjustments for 'dev' environment
     /* $config['bootstrap'][] = 'debug';
       $config['modules']['debug'] = [
       'class' => 'yii\debug\Module',
@@ -83,7 +96,7 @@ if (YII_ENV_DEV) {
     $config['modules']['gii'] = [
         'class' => 'yii\gii\Module',
             // uncomment the following to add your IP if you are not connecting from localhost.
-            //'allowedIPs' => ['127.0.0.1', '::1'],
+//'allowedIPs' => ['127.0.0.1', '::1'],
     ];
 }
 
