@@ -56,12 +56,14 @@ return [
     'Gift request successfully send' => 'تم إرسال طلب الهدية بنجاح',
     'Activation Code' => 'رمز التنشيط ',
     'Please enter the 4-digit login code found inside your box to continue' => 'الرجاء إدخال الرمز المكوّن من أربع خانات الخاصّ بتسجيل الدخول، الموجود داخل العُلبة، من أجل إكمال عمليّة تقديم الطلَب. ',
-    'Particiapte in the Lucky Draw' => 'شارِك في عمليّة السَحب وجرّب حظك! ',
+    'Participate in the Lucky Draw' => 'شارِك في عمليّة السَحب وجرّب حظك! ',
     'Spin the Wheel' => 'قُم بتدوير عجَلة المُسابقة ',
     'Congratulations! You have won a' => 'نُهنِّئك! أنتَ الرابح ولقد حصلت على',
     'Claim your gift' => 'احصل الآن على هديّتك المُميزة',
     'Upload Invoice/Proof of Purchase' => 'تحميل الفاتورة الخاصّة بعمليّة الشراء/ إثبات عمليّة الشراء',
     'Gift Code' => ' الرقم الخاصّ بالهديّة',
-    'Thank You for submitting, you will receive an email from us shortly!' => 'شُكرًا لك على إتمام عمليّة الإرسال، سوف تتلقّى بريدًا إلكترونيًا للردّ على طلبك قريبًا!'
+    'Thank You for submitting, you will receive an email from us shortly!' => 'شُكرًا لك على إتمام عمليّة الإرسال، سوف تتلقّى بريدًا إلكترونيًا للردّ على طلبك قريبًا!',
+    'Exclusively Available in:' => 'متوفر حصريا في:',
+    'Terms & Conditions' => 'الشروط والأحكام'
 ];
 

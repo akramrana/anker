@@ -57,14 +57,22 @@ class SiteController extends Controller
      */
     public function actions() {
         return [
-            'error' => [
+            /*'error' => [
                 'class' => 'yii\web\ErrorAction',
-            ],
+            ],*/
             'captcha' => [
                 'class' => 'yii\captcha\CaptchaAction',
                 'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
             ],
         ];
+    }
+
+    public function actionError() {
+        $this->layout = 'custom_error';
+
+        $exception = Yii::$app->errorHandler->exception;
+
+        return $this->render('error', ['exception' => $exception]);
     }
 
     /**
@@ -165,13 +173,12 @@ class SiteController extends Controller
      */
     public function actionLogin() {
         if (!Yii::$app->user->isGuest) {
-            return $this->goHome();
+            return $this->redirect(['dashboard/index']);
         }
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
             return $this->redirect(['dashboard/index']);
-            ;
         }
 
         $model->password = '';
@@ -216,6 +223,11 @@ class SiteController extends Controller
      */
     public function actionAbout() {
         return $this->render('about');
+    }
+    
+    public function actionTermsConditions() {
+        $this->layout = 'site_main';
+        return $this->render('terms-conditions');
     }
 
     public function actionChangeLanguage() {
