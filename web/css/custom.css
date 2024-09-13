@@ -201,6 +201,9 @@ text{
 .terms{
     margin-left: 25px;
 }
+.anker-img{
+    width: 70px;
+}
 @media (max-width: 345px) {
     .ipower{
         font-size: 22px !important;
@@ -299,6 +302,7 @@ text{
     .tc{
         margin: 0;
         padding: 0;
+        font-size: 14px;
     }
 }
 @media (max-width: 540px) {
