@@ -1,4 +1,5 @@
 <?php
+
 use yii\web\Request;
 
 $functions = require __DIR__ . '/functions.php';
@@ -12,7 +13,7 @@ $config = [
     'bootstrap' => ['log'],
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
-        '@npm'   => '@vendor/npm-asset',
+        '@npm' => '@vendor/npm-asset',
     ],
     'components' => [
         'request' => [
@@ -25,7 +26,7 @@ $config = [
         ],
         'user' => [
             'identityClass' => 'app\models\User',
-            'enableAutoLogin' => true,
+            'enableAutoLogin' => false,
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
@@ -60,25 +61,29 @@ $config = [
                 ],
             ],
         ],
+        'session' => [
+            'class' => 'yii\web\Session',
+            'cookieParams' => ['lifetime' => 7 * 24 * 60 * 60]
+        ],
     ],
     'params' => $params,
-    //'defaultRoute' => 'dashboard/index',
+        //'defaultRoute' => 'dashboard/index',
 ];
 
 if (YII_ENV_DEV) {
     // configuration adjustments for 'dev' environment
-    /*$config['bootstrap'][] = 'debug';
-    $config['modules']['debug'] = [
-        'class' => 'yii\debug\Module',
-        // uncomment the following to add your IP if you are not connecting from localhost.
-        //'allowedIPs' => ['127.0.0.1', '::1'],
-    ];*/
+    /* $config['bootstrap'][] = 'debug';
+      $config['modules']['debug'] = [
+      'class' => 'yii\debug\Module',
+      // uncomment the following to add your IP if you are not connecting from localhost.
+      //'allowedIPs' => ['127.0.0.1', '::1'],
+      ]; */
 
     $config['bootstrap'][] = 'gii';
     $config['modules']['gii'] = [
         'class' => 'yii\gii\Module',
-        // uncomment the following to add your IP if you are not connecting from localhost.
-        //'allowedIPs' => ['127.0.0.1', '::1'],
+            // uncomment the following to add your IP if you are not connecting from localhost.
+            //'allowedIPs' => ['127.0.0.1', '::1'],
     ];
 }
 
