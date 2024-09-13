@@ -57,9 +57,9 @@ class SiteController extends Controller
      */
     public function actions() {
         return [
-            /*'error' => [
-                'class' => 'yii\web\ErrorAction',
-            ],*/
+            /* 'error' => [
+              'class' => 'yii\web\ErrorAction',
+              ], */
             'captcha' => [
                 'class' => 'yii\captcha\CaptchaAction',
                 'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
@@ -153,6 +153,14 @@ class SiteController extends Controller
                         $item->updated_at = date('Y-m-d H:i:s');
                         $item->save(false);
                     }
+                    Yii::$app->mailer->compose('@app/mail/gift-confirmation', [
+                                'model' => $model,
+                                'item' => $item,
+                            ])
+                            ->setFrom([Yii::$app->params['siteEmail'] => Yii::$app->params['appName']])
+                            ->setTo($model->email)
+                            ->setSubject("Gift confirmation::anker-mea.com")
+                            ->send();
                     Yii::$app->session->setFlash('success', Yii::t('yii', 'Thank You for submitting, you will receive an email from us shortly!'));
                     Yii::$app->session->set('form_submitted', 1);
                     return $this->redirect(['gift-claim']);
@@ -224,7 +232,7 @@ class SiteController extends Controller
     public function actionAbout() {
         return $this->render('about');
     }
-    
+
     public function actionTermsConditions() {
         $this->layout = 'site_main';
         return $this->render('terms-conditions');
@@ -240,7 +248,7 @@ class SiteController extends Controller
         if (Yii::$app->request->isAjax) {
             $request = Yii::$app->request->post();
             $model = \app\models\LoginCodes::find()
-                    ->where(['code' => $request['LoginCodes']['code'], 'used' => 0, 'is_active' => 1, 'is_deleted' => 0])
+                    ->where(['trim(code)' => $request['LoginCodes']['code'], 'used' => 0, 'is_active' => 1, 'is_deleted' => 0])
                     ->one();
             if (!empty($model)) {
                 Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
