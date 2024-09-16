@@ -202,7 +202,7 @@ text{
     margin-left: 25px;
 }
 .anker-img{
-    width: 70px;
+/*    width: 70px;*/
 }
 @media (max-width: 345px) {
     .ipower{

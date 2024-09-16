@@ -114,8 +114,8 @@ if (Yii::$app->session['lang'] == 'ar') {
                                                                                     <img class="bottom-link-img" src="<?php echo BaseUrl::home(); ?>images/Microsite_11.gif" alt="external link" />
                                                                                 </a>-->
 
-                                        <a target="_new" href="https://uae.sharafdg.com/?q=anker&post_type=product" class="btn-custom">
-                                            <img class="bottom-link-img anker-img" src="<?php echo BaseUrl::home(); ?>images/Anker _Innovations_Square-01.png" alt="external link" />
+                                        <a target="_new" href="https://www.citycentremirdif.com/en/find-a-store/anker-innovations" class="btn-custom">
+                                            <img class="bottom-link-img anker-img" src="<?php echo BaseUrl::home(); ?>images/20240916-143746.png" alt="external link" />
                                         </a>
                                         <a target="_new" href="https://www.virginmegastore.ae/en/search/?q=Anker%3AsearchID%3D63411947%26action%3DFACET_REFING%26page%3D1%26nbResultsPerPage%3D48%26sorting%3DMY_SELECTION%26constraints%3DdisplayedElvisLabel%3AANKER%26query%3DAnker%26version%3D4.1#" class="btn-custom">
                                             <img class="bottom-link-img" src="<?php echo BaseUrl::home(); ?>images/Microsite_15.gif" alt="external link" />
