@@ -153,13 +153,17 @@ class SiteController extends Controller
                         $item->updated_at = date('Y-m-d H:i:s');
                         $item->save(false);
                     }
+                    $subject = "Congratulations on Winning " . $item->name_en . "!";
+                    if ($item->sku >= 109) {
+                        $subject = "Congratulations on Winning UFC 308 Tickets!";
+                    }
                     Yii::$app->mailer->compose('@app/mail/gift-confirmation', [
                                 'model' => $model,
                                 'item' => $item,
                             ])
                             ->setFrom([Yii::$app->params['siteEmail'] => Yii::$app->params['appName']])
                             ->setTo($model->email)
-                            ->setSubject("Gift confirmation::anker-mea.com")
+                            ->setSubject($subject)
                             ->send();
                     Yii::$app->session->setFlash('success', Yii::t('yii', 'Thank You for submitting, you will receive an email from us shortly!'));
                     Yii::$app->session->set('form_submitted', 1);
@@ -267,5 +271,25 @@ class SiteController extends Controller
         if (isset($_GET) && $_GET['code'] != '') {
             Yii::$app->session->set('code', $_GET['code']);
         }
+    }
+
+    public function actionTestEmail() {
+        $model = GiftClaims::find()->one();
+        $item = Items::find()
+                ->where(['is_active' => 1, 'is_deleted' => 0, 'sku' => 104])
+                ->andWhere('remaining_qty > 0')
+                ->one();
+        $subject = "Congratulations on Winning " . $item->name_en . "!";
+        if ($item->sku >= 109) {
+            $subject = "Congratulations on Winning UFC 308 Tickets!";
+        }
+        Yii::$app->mailer->compose('@app/mail/gift-confirmation', [
+                    'model' => $model,
+                    'item' => $item,
+                ])
+                ->setFrom([Yii::$app->params['siteEmail'] => Yii::$app->params['appName']])
+                ->setTo('akram.lezasolutions@gmail.com')
+                ->setSubject($subject)
+                ->send();
     }
 }

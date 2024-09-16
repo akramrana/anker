@@ -478,76 +478,9 @@ use yii\helpers\Html;
                                             </a>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td align="center" class="es-m-p10r es-m-p10l"
-                                            style=" margin: 0; padding-left: 20px; padding-right: 20px;">
-                                            <h1 class="welcome-head" style="width: 600px;">Welcome to anker-mea.com</h1>
-                                        </td>
-                                    </tr>
-
-
                                 </tbody>
                             </table>
                             <?= $content ?>
-                            <table cellpadding="0" cellspacing="0" class="es-footer" align="center" role="none" style="
-                                   mso-table-lspace: 0pt;
-                                   mso-table-rspace: 0pt;
-                                   border-collapse: collapse;
-                                   border-spacing: 0px;
-                                   table-layout: fixed !important;
-                                   width: 100%;
-                                   background-color: transparent;
-                                   background-repeat: repeat;
-                                   background-position: center top;
-                                   ">
-                                <tbody>
-                                    <tr>
-                                        <td align="center" style="padding: 0; margin: 0">
-                                            <table bgcolor="#ffffff" class="es-footer-body" style="
-                                                   mso-table-lspace: 0pt;
-                                                   mso-table-rspace: 0pt;
-                                                   border-collapse: collapse;
-                                                   border-spacing: 0px;
-                                                   background-color: #fff;
-                                                   border-radius: 0 0 50px 50px;
-                                                   width: 600px;
-                                                   " align="center" cellpadding="0" cellspacing="0" role="none">
-                                                <tbody>
-                                                    <tr>
-                                                        <td align="left" background="<?php echo \yii\helpers\Url::to('@web/images/Anker _Innovations_Square-01.png', true); ?>" style="
-                                                            padding: 30px;
-                                                            margin: 0;
-                                                            background-image: url(<?php echo \yii\helpers\Url::to('@web/images/Anker _Innovations_Square-01.png', true); ?>);
-                                                            background-repeat: no-repeat;
-                                                            background-position: center center;
-                                                            ">
-                                                            <table cellpadding="0" cellspacing="0" width="100%" role="none"
-                                                                   style="
-                                                                   mso-table-lspace: 0pt;
-                                                                   mso-table-rspace: 0pt;
-                                                                   border-collapse: collapse;
-                                                                   border-spacing: 0px;
-                                                                   ">
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td align="left" style="
-                                                                            padding: 0;
-                                                                            margin: 0;
-                                                                            width: 540px;
-                                                                            ">
-                                                                            
-                                                                        </td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
                         </td>
                     </tr>
                 </tbody>
