@@ -35,7 +35,9 @@ var site = {
         },
         success: function ()
         {
-          location.href = baseUrl + 'site/gift-claim';
+          setTimeout(function(){
+            location.href = baseUrl + 'site/gift-claim';
+          },2500);
         },
         error: function (jqXHR, textStatus, errorThrown) {
           alert(jqXHR.responseText);

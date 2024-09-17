@@ -88,7 +88,7 @@ if (Yii::$app->session['lang'] == 'ar') {
                 <div class="modal-footer justify-content-between">
                     <div class="float-right text-right w-100">
     <!--                    <button type="button" class="btn btn-default" data-dismiss="modal"><?= Yii::t('yii', 'Close'); ?></button>-->
-                        <button onclick="site.claimGift('<?= $model->code; ?>')"  type="button" class="btn btn-primary theme-bg <?= $btnFont; ?>"><?= Yii::t('yii', 'Claim your gift'); ?></button>
+<!--                        <button onclick="site.claimGift('<?= $model->code; ?>')"  type="button" class="btn btn-primary theme-bg <?= $btnFont; ?>"><?= Yii::t('yii', 'Claim your gift'); ?></button>-->
                     </div>
                 </div>
                 <?php
@@ -135,6 +135,7 @@ $js = "
             $('#itemName').html(data.label);
             $('#item_sku').val(data.sku);
             $('#modal-default').modal('show');
+            site.claimGift('$model->code')
         }
       };
       const btnSpin = document.querySelector('button');
