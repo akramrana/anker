@@ -20,81 +20,86 @@ if (Yii::$app->session['lang'] == 'ar') {
                     <?php
                     if (Yii::$app->session['lang'] == 'ar') {
                         ?>
-                        <p>- هذه الشروط سارية بدءًا من 20 أيلول، سبتمبر حتى 8 الثامن من شهر كانون الثاني، ديسمبر من العام الحالي 2024. </p>
-                        <p>- تُعدّ هذه الأحكام سارية عند عمليّة الشراء فقط وتقتصر على:   </p>
+                        <p><b>مُدّة سرَيان هذا العرض: بدءًا من 1 تشرين أوّل/ أكتوبر – حتى 30 تشرين الثاني/نوفمبر 2024. 
+                                المُنتجات المُدرَجة ضمن مسابقة عجلة الربح الرقميّة من مجموعة أنكر آي باور:  </b></p>
 
-                    <p>    مجموعة iPower للمُنتجات الثقيلة الوزن: تتكوّن من حافظة مغناطيسيّة شفّافة اللون مُخصّصة لهواتف آيفون نوع iPhone16 Pro /Pro Max + شاشة حماية زُجاجيّة شفافة اللون للغاية، ومُخصصة لهواتف آيفون بأنواع iPhone 16 Pro /Pro Max، + مع شاحن حائط للطاقة + مِقبض مُخصص لحَمل الهاتف نوع MagGo.</p> 
-                    <p>    مجموعة iPower للمُنتجَات المُتوسّطة الوزن: مُكوّنة من حافظة مغناطيسيّة شفّافة اللون مُخصّصة لهواتف آيفون نوع iPhone16 Pro /Pro Max + شاشة حماية زُجاجيّة شفّافة اللون للغاية، مُخصّصة لهواتف آيفون بأنواع iPhone16 Pro /Pro Max + مع شاحن حائط مُتضمَّن. </p>
+                        <p><b> مجموعة آي باور الثقيلة مكوّنة مِن: </b><br/>
+                            جوّال آيفون 16 برو/ حافظة مغناطيسيّة شفّافة اللون مُخصّصة لهاتف آيفون 16 برو ماكس + آيفون 16 برو/ شاشة حماية شفّافة للغاية لجوّال آيفون 16 برو ماكس + شاحن حائط من أنكر + مِقبض مغناطيسي للإمساك بالهاتف نوع MagGo.  
+                            <b>  أو: </b></p>
+                        <p><b> مجموعة آي باور ذات الوزن المُتوسّط:  </b><br/>
+                            جوّال آيفون 16 برو/ حافظة مغناطيسيّة شفّافة اللون مُخصّصة لهاتف آيفون 16 برو ماكس + آيفون 16 برو/ شاشة حماية شفّافة للغاية لجوّال آيفون 16 برو ماكس + شاحن حائط من أنكر. 
+                            <b>    هذا العرض الحصريّ متوفّر في إماراتيّ دبي وأبوظبي فقط. </b></p>
 
-                    <p>    ● هذا العرض المذكور صالح فقط في حالة شراء جميع المجموعات المذكورة أعلاه من المتاجر المُحدّدة التالية حصريًا وهي: Virgin وJumbo وSharaf DG وCarrefour وLulu وEmax وEros وAnker Innovations الواقع في منطقة مردِف سيتي سنتر، دبي. </p>
-                    <p>    ● ​​هذا العرض المُخصّص هو فقط مُتاح في مدينتَي دبي وأبو ظبي في الإمارات العربية المتحدة حصرًا. </p>
-                    <p>    ● كل عميل يقوم بشراء مجموعة واحدة من المجموعات السابقة أو أكثر، من مجموعات أنكر المعروضة Anker iPower والمذكورة أعلاه مِن أيّ متجر من متاجر KDR المذكورة سيكون مؤهلاً لدخول السحب الرقميّ والربح. </p>
-                    <p>    ● بعد شرائكَ لمجموعة أو أكثر من مجموعات Anker iPower المشمولة بالعَرض، يجب عليك اتّباع الخطوات التالية:  </p>
+                        <div>•	كل عميل يقوم بشراء مجموعة واحدة أو أكثر من مُنتجات أنكر آي باور Anker iPower المذكورة أعلاه، مِن أيّ متجر إلكترونيّ يتوفّر فيه العَرض من المتاجر المذكورة أعلاه حصريًا، سيكون مُؤهلاً للحصول على عرض (أدِر العجلة للربح الرقمي) من أجل الحصول على هديّة مُميّزة.  <br/>
+                            - بعد شرائك لمجموعة واحدة/ أو مجموعات مُتعدّدة من أنكر آي باور Anker iPower المُتوفّرة بالعرض،<b> يجب عليك كَعميل  القيام باتّباع الخطوات التالية بدقّة:</b> <br/>
+                            <br/><p><b><u>- الخطوة الأولى:</u></b> قُم بمَسح رمز الاستجابة السريعة الخاصّ بالعرض، والمطبوع إلكترونيًا على البطاقة داخل صندوق مجموعة المُنتجات، لأجل الدخول إلى الموقع الإلكتروني الخاص بنا <b>(anker-mea.com) لدخول مسابقة أد</b>ِر عجلة الربح الرقميّة Digital Spin-The-Wheel.</p>  
+                            <p><b><u>- الخطوة الثانية:</u></b> بعدها قُم بإدخال الرمز الخاصّ المطبوع على ظهر بطاقة العَرض، لأجل التحقُّق من صحة عمليّة الدُخول والتسجيل في الموقع الإلكتروني الخاص بالمُسابقة. </p>
+                            <p><b><u>- الخطوة الثالثة:</u></b> ابدأ اللّعب عبرَ الإنترنت وأدِر العجلة الرقميّة الافتراضيّة، ثمّ احصل/ أو احصلي على جائزة مميزة مضمونة، وهي جائزة المُنافِس.     </p> 
+                            <p><b><u>- الخطوة الرابعة:</u></b> أدخل/ أو أدخلي كافّة البيانات والمعلومات الشخصيّة، على الموقع الإلكتروني للُعبة، لحجز الهدية الخاصّة بك. </p>
+                            <p><b><u> الخطوة الخامسة:</u></b> بمجرّد إدخالك لبياناتك الشخصيّة في الموقع الإلكترونيّ، سيتم إدخال اسمك تلقائيًا كَمنافس مؤهّل في السحب الضخم الذي سُيقام في 1 ديسمبر 2024 (بعد نهاية مُدّة العرض بتاريخ 30 نوفمبر 2024) حيث ستحصل على فرصة الترشُّح للفوز بالجائزة الكبرى (جائزة البطل).   </p>
 
-                    <p>    - الخطوة الأولى: قُم بمَسح رمز الاستجابة السريعة المطبوعة على ظهر هذه البطاقة المُرفقَة، لأجل دخول الموقع الإلكتروني الخاصّ بلُعبة Digital Spin-The-Wheel</p>
-                    <p>    - الخطوة الثانية:  أدخل الرمز الخاصّ المطبوع أسفل رمز الاستجابة السريعة، للتحقُّق من صحّة وسلامة عمليّة الدخول إلى الموقع الإلكترونيّ. </p>
-                    <p>    - الخطوة الثالثة: استمتع بلَعب لُعبة Digital Spin-The-Wheel عبر الإنترنت مُباشرةً، واحصل على جائزة مُميّزة، وهي جائزة مُخصّصة للمُتنافسين، أو احصل على جائزة البطل الرابح، أو جائزة الترضية.  </p>
-                    <p>    - الخطوة الرابعة: أدخِل كامل التفاصيل الشخصيّة الخاصة بك، عبرَ الموقع الإلكتروني لتسجيل طلبك الخاص بهديّتك.    </p>
+                            <p> - كُل عميل من المُشترين سوف يكون مُؤهّلاً للحصول على فرصة واحدة للفوز بلُعبة (أدِر العجلة الرقميّة) عند شرائه لإحدى المجموعات المعروضة أو أكثر من المُنتجات المذكورة أعلاه.</p>
+                            <p> - سيكون الرمز الفريد الخاصّ بالعميل، والمطبوع على بطاقة العرض الخاصّة بالمُسابقة داخل صندوق المُنتجات، هو دليل التصديق على أهليّة المُتسابِق.</p>
+                            <p> - سيحصُل كل مُتسابِق/ مُتسابِقة مُؤهّل من المُتسابقين، على واحدة فقط مِن الجوائز المُقدّمة المُعلَن عنها والمُدرجَة أدناه، ويتمّ الفوز بها لك/ لكِ من خلال لعبة (أدِر العجلة الرقميّة). </p>
+                            <p> - بعد أن يقوم العميل المؤهّل بإدخال بياناته الشخصية، ومن ثمّ القيام بلعبة أدِر عجلة الربح الرقميّةDigital Spin-The-Wheel، فقط في هذه الحالة؛ سوف يتلقّى بريدًا إلكترونيًا من الموقع لتقديم تفاصيل الموقع الذي يمكنه فيه استلام جائزة المُتنافِس.</p>
+                            <p> - كل عميل مُشارِك مؤهّل يقوم بإدخال بياناته الشخصية بعد القيام بلعبة أدِر العجلة الرقميّة Digital Spin-The-Wheel للترشُّح على جائزة المُنافِس، سيدخل أيضًا في السحب الكبير تلقائيًا، مع نهاية مُدّة العَرض للحصول على فرصة للفوز بإحدى جوائز المُنافسة.    </p>
+                        </div>
 
-                    <p>   - سيكون كل عميل من العملاء الذين اشتروا المُنتجَات المذكورة، مُؤهلاً تمامًا للحصول على فُرصة واحدة من أجل الفوز في السَحب عن طريق العجَلة الرقميّة Digital Spin-The-Wheel وذلك عندَ شراء إحدى مجموعات المُنتجَات المذكورة أعلاه من أنكر.</p>
-                    <p>    - سيكون الرمز الخاص المطبوع أسفل رمز الاستجابة السريعة، المُتموضِع على ظهر هذه البطاقة هو الإثبات على إمكانيّة الأهليّة والتأهُّل للمسابقة. </p>
-                    <p>    - سوفَ يحصُل كل عميل من العُملاء الذين اشتروا المنتجات وأصبحوا مُؤهَّلين على جائزة واحدة فقط من الجوائز المذكورة المُدرجَة ضمن العرض أدناه، والتي سيفوز بها من خلال دخوله السحب عبرَ العجَلة الرقميّة Digital Spin-The-Wheel. </p>
-                    <p>    - قائمة الهدايا المشمولة التي يمكن للعميل المُؤهَّل الفوز بها، هي كالتالي:  </p>
+                        <p>•<b>  القائمة الخاصّة بالجوائز المُدرَجة والجوائز الكُبرى للمسابقة، والتي سيتمكّن المُتسابِق المُؤهّل من الترشُّح للفوز بها، هي كالآتي:  </b>
+                            - جائزة المتسابق: حافظة فريدة للمياه، كوب مُخصص للسفر والتنقُّل، حقيبة ظهر مُميزة، شاحن حائط من Anker، كابل بوصلة Anker USB C – USC C، مع مُنتَج Anker Cube. 
+                            - جائزة البطل: الجوّال الأحدث من آيفون iPhone 16 (256GB)، ساعة ذكيّة نوع Apple iWatch SE. </p>
 
-                    <p>    الجوائز: </p>
-                    <p>    - الجائزة المُخصّصة للمُترشّحين: حافظة رائعة للمياه، كُوب مُخصّص للسفر، قُبّعة مُميّزة، حقيبة مُخصصة للظهر، شاحن مُخصص للحائط من أنكر Anker، شاحن سيّارة Anker، كابل كهربائي Anker. </p>
-                    <p>    - جائزة البطل الرابح: عبارة عن مُنتجات رائعة من أنكر وآبّل وهيَ آيفون الجديد 16، ساعة آبّل iWatch، أنكر Anker Cube. </p>
-                    <p>    - جائزة الترضيَة لمَن لم يتأهّل: تذكرة رائعة لحضور UFC 308.  </p>
+                        <p>• يتوجّب على الفائز استلام جائزة المُنافسة من متجر الشركة الخاص بعلامة أنكر التجاريّة Anker Innovations، القائم في مردف سيتي سنتر، دبي، الإمارات العربيّة المُتحدّة.  </p>
+                        <p>• سيتم الاتّصال بالفائزين الرابحين بجائزة البطل من خلال اتّصال هاتفي، ورسالة بريد إلكتروني بعد الإعلان عن أسمائهم من خلال سحب الجائزة الكبرى الذي سُيقام في المتجر الخاص بالعلامة التجارية لشركة أنكر Anker Innovations القائم في مردف سيتي سنتر، دبي، الإمارات العربية المتحدة في 1 ديسمبر 2024. </p>
+                        <p>• يتوجّب على الفائز الرابح لجائزة البطل استلام جائزته من المتجر الخاص بالعلامة التجارية لشركة أنكر Anker Innovations القائم في مردف سيتي سنتر، دبي، الإمارات العربية المتحدة، في غضون <b>30</b> يومًا من تاريخ إرسال البريد الإلكتروني/ الاتّصال الهاتفي. </p>
+                        <p>• يتوجّب على الفائز بجائزة المُتنافِس وجائزة البطل تقديم نسخة من البريد الإلكتروني المُرسَل الذي تلقّوه من الموقع أو من فريق تسويق Anker على التوالي، بالإضافة إلى عرض بطاقة الهوية الإماراتية الخاصة للمُطالبَة بالجائزة واستلامها. </p>
+                        <p>• يجب على الفائز استلام الجائزة بنفسه. وفي حال رغبته بتفويض أيّ شخص آخر لاستلام الجائزة بالنيابة عنه، فيجب عليه تفويض هذا الشخص برسالة تفويض خاصّة، كما يجب على المُفوَّض أن يصطحب النسخة الأصلية من رسالة التفويض مع هويته الإماراتية الأصليّة، والنسخة من البريد الإلكتروني الذي تمّ استلامه عبر البريد الإلكتروني، ونسخة من الهوية الإماراتيّة للفائز.</p>
+                        <p>• لا يمكن استبدال جائزة المُنافِس أو جائزة البطل التي تمّ الفوز بها وربحها، أو المُطالبة بها نقدًا أو استبدالها بأيّ مُنتَج آخر.</p>
+                        <p>• لا يمكن للفائزين بجهاز iPhone 16 اختيار لون محدد لهاتف آيفون iPhone 16. وسيتوجّب عليهم قبول اللون المعروض عليهم كجائزة كما هو.   </p>
+                        <p>•  تحتفظ شركة أنكر إينوفيشين محدودة المسؤوليّة Anker MEA FZE بالحقّ الكامل في تعديل الشروط والأحكام الخاصّة بهذا العرض في أيّ وقت من الأوقات.     </p>
 
-                    <p>    ● يجب على الفائز النهائي بالمُسابقة استلام جائزة المُنافسة من متجر Anker Innovations حصريًا، الكائن في مردف سيتي سنتر، دبي.</p>
-                    <p>    ● يجب على الفائز استلام جائزة البطل الخاصة به من مكتب Anker MEA FZE الموجود في واحة دبي للسيليكون.</p>
-                    <p>    ● سيتمّ لاحقًا إرسال جائزة ترضية للّذين لم يتأهّلوا للربح، إلى الفائز المُحدّد عبر تطبيق واتساب. </p>
-                    <p>    ● يجب على الفائز بجائزة المُنافسة، وجائزة البطل الرابح، إرسال وتقديم بريد إلكتروني من خلال الموقع الإلكتروني المُخصص مع بطاقة الهوية الإماراتية الخاصة به، لطَلب جائزته.</p>
-                    <p>    ● تجدُر الإشارة أنّه لا يُمكِن استبدال الهدية أو الجائزة الكبرى أو الجائزة النهائيّة أو المُطالبة بها نقدًا كَمبلغ مدفوع. </p>
-                    <p>    ● تحتفظ شركة أنكر Anker MEA FZE بالحقّ في تعديل أيّ جزء من الشروط والأحكام الخاصة بهذا العرض المُعلَن في أيّ وقت من الأوقات.  </p>
-
-                    <p>    عنوان شركة أنكر: Anker MEA FZE E205، الجناح رمز E، الطابق الثاني، المقرّ الرئيس لواحة دبي للسيليكون، واحة دبي للسيليكون 2، إمارة دبي، الإمارات العربية المتحدة. رقم الهاتف: 04 3724670 </p>
+                        <p> العُنوان والموقع: شركة أنكر محدودة المسؤوليّة Anker MEA FZE الرقم E205، الجناح E، الطابق الثاني، المقرّ الرئيسي لواحة دبي للسيليكون، واحة دبي للسيليكون، دبي، الإمارات العربية المتحدة.<b> رقم الهاتف:</b> <a href="tel:04 3724670">04 3724670</a> </p>
 
                         <?php
                     } else {
                         ?>
-                        <p>●        This promotion is valid from 20th September to 8th December 2024</p>
-                        <p>●        This promotion is valid only on the purchase of:  </p>
+
+                        <p>●	This promotion is valid from 1st October to 30th November 2024</p>
+                        <p>●	This promotion is valid only on the purchase of:<br/>
+                            <strong>iPower Heavyweight Kit</strong>: iPhone16 Pro /Pro Max magnetic Transparent case + iPhone 16 Pro /Pro Max High transparency screen protector + Wall Charger + MagGo Phone Grip
+                            <br/>OR<br/>
+                            <strong>iPower Middleweight Kit</strong>: iPhone16 Pro /Pro Max magnetic Transparent case + iPhone16 Pro / Pro Max High transparency screen protector + Wall Charger </p>
+                        <p>●	Every customer purchasing one or more of the above listed Anker iPower Bundle Kit from any electronic retail store where this bundle is available, will be eligible for Digital Spin - The - Wheel promotion to get an assured gift (Contender Prize)</p>
+                        <p>●	This promotion is  applicable only in Abu Dhabi and Dubai.</p>
+                        <div>
+                            <p>●	After purchasing the eligible Anker iPower Bundle Kit/s, the customer has to follow the below steps:</p>
+                            <p><u>Step 1:</u> 	Scan the QR code, printed on the promotion card inside the bundle box to enter the microsite (anker-mea.com) for the Digital Spin-The-Wheel</p>
+                            <p><u>Step 2: </u>	Enter the unique code printed on the promotion card to validate and login into the microsite</p>
+                            <p><u>Step 3 : </u>	Play the Digital Spin-The-Wheel where he/she will get a Contender Prize </p>
+                            <p><u>Step 4: </u>	Enter his/her personal details on the site to claim the Contender Prize</p>
+                            <p><u>Step 5: </u>	Once the eligible customer enters the personal details, his/her name will automatically get entered into a Mega Raffle Draw that would happen on 1st December 2024 (after the end of the promotion period on 30th November 2024).</p>
+                        </div>
+                        <p>●	Every customer would be eligible for one chance of Digital Spin-The-Wheel with the purchase of one of the above bundle kits</p>
+                        <p>●	The unique code printed on the promotion card inside the bundle box, would be the validator for the eligibility</p>
+                        <p>●	Every eligible customer will get only one unit of any of the below listed Contender Prize, that he/she wins through Digital Spin-The-Wheel.</p>
+                        <p>●	Only after the eligible customer enters the personal details after playing the Digital Spin-The-Wheel, he/she will get an email from the microsite to give the details of the place from where he/she can collect the Contender Prize</p>
+                        <p>●	Every eligible customer entering the personal details after playing the Digital Spin-The-Wheel to claim the Contender Prize, will also automatically enter into the Mega Raffle Draw at the end of the promotion period to get a chance to win one of the Mega Prizes (Champion Prizes)</p>
+                        <p>●	The list of Contender Prize & Champion Prize from which the eligible customer can win are:<br/>
+                            <strong>- Contender Prize:</strong> Water Bottle, Travel Mug, BackPack, Anker Wall Charger, Anker USB C – USC C Cable, Anker Cube<br/>
+                            <strong>- Champion Prize:</strong> iPhone 16 (256GB), Apple iWatch SE</p>
+                        <p>●	The Contender Prize will have to be collected by the customer from Anker Innovations Brand Store in Mirdif City Center, Dubai, UAE.</p>
+                        <p>●	The Champion Prize winners will be contacted by phone call and an email after their name is announced through the Mega Prize Raffle Draw that would take place at Anker Innovations Brand Store in Mirdif City Center, Dubai, UAE on 1st December 2024</p>
+                        <p>●	The Champion Prize winner will have to collect his/her prize from Anker Innovations Brand Store in Mirdif City Center, Dubai, UAE within 30 days from the date of the email/Phone call</p>
+                        <p>●	The winner of the Contender Prize and the Champion Prize, will have to present the copy of the email that he/she would receive from the microsite or from the Anker Marketing Team respectively along with his/her Emirates ID to claim the prize</p>
+                        <p>●	The winner will have to collect the prize personally. In case he/she wishes to authorize someone else as representative to collect the prize on his/her behalf, then they have to authorise that representative with a letter of authorisation. The representative should carry the original copy of the letter of authorisation along with his/her original Emirates ID, copy of the email received by the winner and copy of the winner’s, Emirates ID. </p>
+                        <p>●	The Contender Prize or the Champion Prize that is won, cannot be exchanged, swapped or claimed as cash or any other product.</p>
+                        <p>●	The winners of the iPhone 16 cannot choose any specific colour for the iPhone 16. They will have to accept whichever they are offered as prize.</p>
+                        <p>●	Anker MEA FZE reserves the right to amend the terms and conditions of the promotion at any time</p>
 
 
-                        <p>iPower Heavyweight Kit: iPhone16 Pro /Pro Max magnetic Transparent case + iPhone 16 Pro /Pro Max High transparency screen protector + Wall Charger + MagGo Phone Grip. </p>
-                        <p>iPower Middleweight Kit: iPhone16 Pro /Pro Max magnetic Transparent case + iPhone16 Pro / Pro Max High transparency screen protector + Wall Charger. </p>
 
-                        <p>●        This promotion is valid only on the purchase of above bundle packs from Virgin, Jumbo, Sharaf DG, Carrefour, Lulu, Emax, Eros and Anker Innovations store in Mirdif City Center.</p> 
-                        <p>●        This promotion is avaiable only in Dubai and Abu Dhabi in UAE. </p>
-                        <p>●        Every customer purchasing one or more of the above listed Anker iPower Bundle Kit from any of the above mentioned KDR stores will be eligible for digital raffle draw. </p>
-                        <p>●        After purchasing the eligible Anker iPower Bundle Kit/s, the customer has to follow the below steps: </p>
+                        <p><b>Anker MEA FZE Address:</b> E205, Wing E, 2nd Floor Dubai Silicon Oasis Headquarter, Dubai Silicon Oasis, Dubai, UAE. <b>Tel:</b> <a href="tel:04 3724670">04 3724670</a></p>
 
-
-                        <p>Step 1:         Scan the QR code, printed overleaf of this card to enter the microsite for the Digital Spin-The-Wheel.</p>
-                        <p>Step 2:         Enter the unique code printed below the QR code to validate and login into the microsite.</p>
-                        <p>Step 3 :         Play the online Digital Spin-The-Wheel and get a assured prize i.e. either a contender prize, a champion prize or a knockout prize.</p>
-                        <p>Step 4:         Enter the personal details on the site to claim the assured gift. </p>
-
-                        <p>●        Every customer would be eligible for one chance of Digital Spin-The-Wheel with the purchase of one of the above bundle kits. </p>
-                        <p>●        The unique code printed below the QR code on the overleaf of this card would be the validator for the eligibility. </p>
-                        <p>●        Every eligible customer will get only one unit of any of the below listed assured prizes that he/she wins through Digital Spin-The-Wheel. </p>
-                        <p>●        The list of assured gifts from which the eligible customer can win are:  </p>
-
-
-                        <p>- Contender Prize: Water Bottle, Travel Mug, Cap, BackPack, Anker Wall Charger, Anker Car Charger, Anker Cable.</p>
-                        <p>- Champion Prize: iPhone 16, Apple iWatch, Anker Cube.</p>
-                        <p>- Knockout Prize: UFC 308 Ticket. </p>
-
-                        <p>●        The Contender Prize will have to be collected by the winner from the Anker Innovations Store at Mirdif City Centre.</p>
-                        <p>●        The Champion Prize will have to be collected by the winner from Anker MEA FZE office at Dubai Silicon Oasis.</p>
-                        <p>●        The Knockout Prize will be sent to the winner by Whatsapp. </p>
-                        <p>●        The winner of the Contender Prize and Champion Prize will have to present the email from the microsite along with his/her Emirates ID to claim the prize. </p>
-                        <p>●        The won assured gift, grand prize or the mega prize cannot be exchanged, swapped or claimed as cash. </p>
-                        <p>●        Anker MEA FZE reserves the right to amend the terms and conditions of the promotion at any time. </p>
-
-
-                        <p>Anker MEA FZE Address: E205, Wing E, 2nd Floor Dubai Silicon Oasis Headquarter, Dubai Silicon Oasis, Dubai, UAE. Tel: 04 3724670 </p>
                         <?php
                     }
                     ?>
